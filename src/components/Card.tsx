@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface CardProps {
   title: string;
@@ -7,14 +8,17 @@ interface CardProps {
   desc: string;
   tags?: string[];
   new?: boolean;
+  link: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, img, desc, tags, new: isNew }) => {
+const Card: React.FC<CardProps> = ({ title, img, desc, tags, new: isNew, link }) => {
   return (
+    <Link href={link}>
+
     <article className="card w-96 bg-base-100 shadow-xl">
       {img && (
         <figure>
-          <Image src={img.src} alt={img.alt} width={600} height={400} />
+          <Image src={img.src} alt={img.alt} width={300} height={200} />
         </figure>
       )}
 
@@ -37,6 +41,7 @@ const Card: React.FC<CardProps> = ({ title, img, desc, tags, new: isNew }) => {
         )}
       </div>
     </article>
+    </Link>
   );
 };
 
