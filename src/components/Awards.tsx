@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 
-
+import Grid from "@/components/Grid";
 import InViewMonitor from "react-inview-monitor";
 import Button from "@/components/Button";
 import Image from "next/image";
@@ -22,7 +22,7 @@ const Award = () => {
       >
         <h2 className="title yellow">Awards</h2>
       </InViewMonitor>
-      <div className="wrapper">
+      <Grid columns={3}>
         <div>
           <div>
             <InViewMonitor
@@ -92,7 +92,7 @@ const Award = () => {
             </InViewMonitor>
           </div>
         </div>
-      </div>
+        </Grid>
       <div className="center">
         <Button type="link" to="/about" className="btn--secondary">
           About Ehsan

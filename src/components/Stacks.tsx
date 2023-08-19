@@ -1,10 +1,11 @@
 import React from "react";
+import Grid from "@/components/Grid";
 import stacks_data from "../../data/stacks-data";
 
 const Stack = () => {
     return (
         <div className="container mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Grid columns={4}>
                 {stacks_data.map((Xstack) => {
                     return (
                         <div key={Xstack.slug} >
@@ -20,7 +21,7 @@ const Stack = () => {
                         </div>
                     );
                 })}
-            </div>
+            </Grid>
         </div>
     );
 };
