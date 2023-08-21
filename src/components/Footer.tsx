@@ -1,9 +1,10 @@
 import React from "react";
+import Section from "./Section";
 
 const Footer = () => (
   <>
     <footer className="footer" role="contentinfo">
-      <div className="grid--footer">
+      <Section>
         <div className="col">
           <div
             className="col-logo"
@@ -154,7 +155,7 @@ const Footer = () => (
             </a>
           </div>
         </div>
-      </div>
+      </Section>
     </footer>
     <div role="complementary" className="copyr">
       © Ehsan Pourhadi - Digital Developer

@@ -11,6 +11,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@codersrank/summary": "^0.9.13",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",

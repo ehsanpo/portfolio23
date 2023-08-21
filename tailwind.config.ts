@@ -13,7 +13,11 @@ const config: Config = {
       xl: "1.5rem",
       "2xl": "2rem",
       "3xl": "3rem",
-      "4xl": "4rem",
+      '4xl': ['4rem', {
+        lineHeight: '4rem',
+        letterSpacing: '-0.01em',
+        fontWeight: '600',
+      }],
     },
     fontFamily: {
       sans: ["ui-sans-serif", "system-ui"],

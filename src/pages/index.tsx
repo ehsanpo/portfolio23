@@ -2,7 +2,6 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import fs from "fs";
 import matter from "gray-matter";
-
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Portfolio from "@/components/Portfolio";
@@ -10,13 +9,19 @@ import Stacks from "@/components/Stacks";
 import Testimonial from "@/components/Testimonial";
 import Awards from "@/components/Awards";
 
+
 export default function Home({ portfolioData }: HomeProps) {
+
+
+
   return (
     <main>
+      
       <Hero
         title="Digital Developer,Ui & UX Designer and Music Producer"
         description="who provides digital solutions with more than ten years of experience creating and developing software for the web."
       />
+    
       <Portfolio data={portfolioData} />
       <Stacks />
       <Awards />

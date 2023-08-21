@@ -1,7 +1,7 @@
 import React from "react";
 
 import SeO from "@/components/Seo";
-import Portfolio from "../components/Portfolio";
+import Portfolio from "@/components/Portfolio";
 import fs from "fs";
 import matter from "gray-matter";
 

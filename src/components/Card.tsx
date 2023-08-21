@@ -18,7 +18,7 @@ const Card: React.FC<CardProps> = ({ title, img, desc, tags, new: isNew, link })
     <article className="card w-96 bg-base-100 shadow-xl">
       {img && (
         <figure>
-          <Image src={img.src} alt={img.alt} width={300} height={200} />
+          <Image style={{aspectRatio:"16/9"}} src={img.src} alt={img.alt} width={400} height={200} />
         </figure>
       )}
 
@@ -32,7 +32,7 @@ const Card: React.FC<CardProps> = ({ title, img, desc, tags, new: isNew, link })
         <p>{desc}</p>
         {tags && (
           <div className="card-actions justify-end">
-            {tags.map((tag) => (
+            {tags.slice(0, 3).map((tag) => (
               <div key={tag} className="badge badge-outline">
                 {tag}
               </div>
