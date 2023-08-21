@@ -12,6 +12,7 @@ const menu: MenuItem = {
   Notes: "/notes",
   Portfolio: "/portfolio",
   Skills: "/skills",
+  Music: "/music",
 };
 
 const Header: React.FC = () => {

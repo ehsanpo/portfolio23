@@ -10,10 +10,11 @@ import Image from "next/image";
 import image1 from "../../public/cannen-b.png";
 import image2 from "../../public/svenskadesign-b.png";
 import image3 from "../../public/guldagg-b.png";
+import Section from "./Section";
 
 const Award = () => {
   return (
-    <section>
+    <Section>
       <InViewMonitor
         intoViewMargin="8%"
         classNameNotInView="vis-hidden"
@@ -98,7 +99,7 @@ const Award = () => {
           About Ehsan
         </Button>
       </div>
-    </section>
+    </Section>
   );
 };
 

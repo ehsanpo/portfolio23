@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 
 function SEO({ description, lang, meta, title }) {
-  const metaDescription = description || "";
+
   // https://codesandbox.io/s/coderranks-summary-forked-nrrywg?file=/src/index.ts
   return (
     
