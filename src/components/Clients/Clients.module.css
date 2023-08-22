@@ -1,0 +1,14 @@
+/* Clients.module.css */
+.clientsContainer {
+    max-height: 200px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+  
+  .show {
+    max-height: 1200px; /* Adjust this value to suit your content height */
+  }
+  
+  .hide {
+    max-height: 200px;
+  }

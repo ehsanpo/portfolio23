@@ -17,7 +17,6 @@ interface PortfolioProps {
 }
 
 const Portfolio: React.FC<PortfolioProps> = ({ data }) => {
-  console.log(data);
   return (
     <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-16">
       <div className="mx-auto max-w-2xl lg:max-w-none">
@@ -27,7 +26,14 @@ const Portfolio: React.FC<PortfolioProps> = ({ data }) => {
               key={item.slug}
               title={item.data.title}
               desc={item.data.description}
-              img={{ src: "/images/portfolio/" + item.data.fileName + "/" + item.data.background_image[0], alt: item.data.title }}
+              img={{
+                src:
+                  "/images/portfolio/" +
+                  item.data.fileName +
+                  "/" +
+                  item.data.background_image[0],
+                alt: item.data.title,
+              }}
               tags={item.data.tag}
               new={item.data.new}
               link={item.slug}

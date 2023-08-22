@@ -7,6 +7,7 @@ interface FrontMatter {
     permalink: string;
     onHome: boolean;
     fileName: string;
+    client: string[];
     // Add other properties here
 }
 
@@ -17,4 +18,5 @@ interface PortfolioItem {
 
 interface HomeProps {
     portfolioData: PortfolioItem[];
+    clients: string[];
 }

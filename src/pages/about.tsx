@@ -3,10 +3,12 @@ import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Section from "@/components/Section";
 import TextAndImage from "@/components/TextAndImage";
+import InstagramGallery from "@/components/InstagramGallery";
 
 export default function About() {
   return (
     <>
+      <InstagramGallery />
       <TextAndImage
         headline="About Ehsan"
         subHeadline="Welcome to my digital world! I'm Ehsan Pourhadi, a versatile Developer, Designer, and Producer with over ten years of experience crafting innovative solutions for the digital realm."
@@ -14,7 +16,7 @@ export default function About() {
 
       <div className="bg-white">
         <div className="container px-5 py-24 mx-auto flex flex-wrap">
-        <span className="text-gray-600 mt-4">
+          <span className="text-gray-600 mt-4">
             My journey as a self-taught professional has equipped me with a
             profound understanding of software development, design, and
             multimedia. With a relentless drive for excellence, I have honed my
