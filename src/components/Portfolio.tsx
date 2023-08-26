@@ -6,6 +6,7 @@ interface PortfolioProps {
   data: {
     slug: string;
     data: {
+      permalink: string;
       title: string;
       description: string;
       fileName: string;
@@ -18,8 +19,8 @@ interface PortfolioProps {
 
 const Portfolio: React.FC<PortfolioProps> = ({ data }) => {
   return (
-    <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-16">
-      <div className="mx-auto max-w-2xl lg:max-w-none">
+    <div className="mx-auto mx-auto container lg:justify-center  lg:px-8 mt-16">
+      <div className="mx-auto  lg:max-w-none">
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
           {data.map((item) => (
             <Card
@@ -36,7 +37,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ data }) => {
               }}
               tags={item.data.tag}
               new={item.data.new}
-              link={item.slug}
+              link={item.data.permalink}
             />
           ))}
         </div>

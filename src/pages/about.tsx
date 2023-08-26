@@ -4,43 +4,54 @@ import Experience from "@/components/Experience";
 import Section from "@/components/Section";
 import TextAndImage from "@/components/TextAndImage";
 import InstagramGallery from "@/components/InstagramGallery";
-
+import Imagehover from "@/components/ImageHover";
 export default function About() {
   return (
     <>
-      <InstagramGallery />
       <TextAndImage
         headline="About Ehsan"
+        imgComponent={<Imagehover />}
         subHeadline="Welcome to my digital world! I'm Ehsan Pourhadi, a versatile Developer, Designer, and Producer with over ten years of experience crafting innovative solutions for the digital realm."
       />
-
-      <div className="bg-white">
-        <div className="container px-5 py-24 mx-auto flex flex-wrap">
-          <span className="text-gray-600 mt-4">
-            My journey as a self-taught professional has equipped me with a
-            profound understanding of software development, design, and
-            multimedia. With a relentless drive for excellence, I have honed my
-            expertise in delivering robust software architectures, seamless user
-            experiences, and visually captivating designs. With a diverse skill
-            set, I excel in various web development stacks, anchored by a robust
-            command of WordPress and Laravel for backend excellence.
-            <br />
-            My proficiency extends seamlessly to front-end mastery with
-            Javascript and HTML/CSS. Beyond web development, I possess a
-            profound comprehension of user interface design, intricacies of logo
-            and identity creation, and the intricacies of search engine
-            optimization.
-            <br />
-            My extensive expertise also spans multimedia and mobile development,
-            as I consistently seek novel ideas and methodologies to elevate my
-            skills and enrich the user experience.
-          </span>
-        </div>
-      </div>
-
-      <section className="text-gray-600 body-font bg-base-200">
+      <Section primary>
         <div className="container px-5 py-7 mx-auto flex flex-wrap">
-          <h2 className="sm:text-3xl text-2xl text-gray-900 font-medium title-font mb-2 md:w-2/5">
+          <h2 className="sm:text-3xl text-2xl font-medium title-font md:w-2/5">
+            Background
+          </h2>
+          <div className="md:w-3/5 md:pl-6">
+            <div className="leading-relaxed text-base">
+              <span className=" mt-4">
+                My journey as a self-taught professional has equipped me with a
+                profound understanding of software development, design, and
+                multimedia. With a relentless drive for excellence, I have honed
+                my expertise in delivering robust software architectures,
+                seamless user experiences, and visually captivating designs.
+                With a diverse skill set, I excel in various web development
+                stacks, anchored by a robust command of WordPress and Laravel
+                for backend excellence.
+                <br />
+                My proficiency extends seamlessly to front-end mastery with
+                Javascript and HTML/CSS. Beyond web development, I possess a
+                profound comprehension of user interface design, intricacies of
+                logo and identity creation, and the intricacies of search engine
+                optimization.
+                <br />
+                My extensive expertise also spans multimedia and mobile
+                development, as I consistently seek novel ideas and
+                methodologies to elevate my skills and enrich the user
+                experience.
+              </span>
+            </div>
+          </div>
+        </div>
+      </Section>
+      <Section maxWidth="m">
+        <div className="container px-5 py-24 mx-auto flex flex-wrap"></div>
+      </Section>
+
+      <Section>
+        <div className="container px-5 py-7 mx-auto flex flex-wrap">
+          <h2 className="sm:text-3xl text-2xl  font-medium title-font mb-2 md:w-2/5">
             Philosophy
           </h2>
           <div className="md:w-3/5 md:pl-6">
@@ -98,10 +109,10 @@ export default function About() {
             </ul>
           </div>
         </div>
-      </section>
-      <section className="text-gray-600 body-font">
+      </Section>
+      <Section secondary>
         <div className="container px-5 py-7 mx-auto flex flex-wrap">
-          <h2 className="sm:text-3xl text-2xl text-gray-900 font-medium title-font mb-2 md:w-2/5">
+          <h2 className="sm:text-3xl text-2xl font-medium title-font md:w-2/5">
             Motivators
           </h2>
           <div className="md:w-3/5 md:pl-6">
@@ -139,14 +150,18 @@ export default function About() {
             </div>
           </div>
         </div>
-      </section>
+      </Section>
       <Section>
-        <div className="flex w-full">
-          <Education />
-          <div className="divider divider-horizontal"></div>
-          <Experience />
+        <div className="flex w-full flex-col sm:flex-row">
+          <div className="md:w-3/6 mt-4 sm:mt-0 w-6/6">
+            <Experience />
+          </div>
+          <div className="w-3/6">
+            <Education />
+          </div>
         </div>
       </Section>
+      <InstagramGallery />
 
       <Awards />
     </>

@@ -34,7 +34,7 @@ const Award = () => {
             >
               <Image alt="Svenska design" className="award-img" src={image2} />
               <div>
-                <h3>Svenska design</h3>
+                <h3 className="text-2xl">Svenska design</h3>
                 Gold Category Digital Design
                 <br />
               </div>
@@ -47,8 +47,8 @@ const Award = () => {
             </InViewMonitor>
           </div>
         </div>
-        <div >
-          <div >
+        <div>
+          <div>
             <InViewMonitor
               intoViewMargin="10%"
               classNameNotInView="vis-hidden"
@@ -57,7 +57,7 @@ const Award = () => {
             >
               <Image alt="Cannes lions" className="award-img" src={image1} />
               <div className="content">
-                <h3>Cannes lions</h3>
+                <h3 className="text-2xl">Cannes lions</h3>
                 Silver Lion in Promo & Activation, Bronze Lion in Cyber &
                 Shortlist in Media
               </div>
@@ -70,8 +70,8 @@ const Award = () => {
             </InViewMonitor>
           </div>
         </div>
-        <div >
-          <div >
+        <div>
+          <div>
             <InViewMonitor
               intoViewMargin="10%"
               classNameNotInView="vis-hidden"
@@ -80,7 +80,7 @@ const Award = () => {
             >
               <Image alt="Guldägget" className="award-img" src={image3} />
               <div className="content">
-                <h3>Guldägget</h3>
+                <h3 className="text-2xl">Guldägget</h3>
                 Gold Category PR & Silver Categories Digital and Alternative
                 Media
               </div>
@@ -93,7 +93,7 @@ const Award = () => {
             </InViewMonitor>
           </div>
         </div>
-        </Grid>
+      </Grid>
       <div className="center">
         <Button type="link" to="/about" className="btn--secondary">
           About Ehsan

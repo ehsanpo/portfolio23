@@ -8,6 +8,7 @@ interface FrontMatter {
     onHome: boolean;
     fileName: string;
     client: string[];
+    tag: string[];
     // Add other properties here
 }
 
@@ -19,4 +20,23 @@ interface PortfolioItem {
 interface HomeProps {
     portfolioData: PortfolioItem[];
     clients: string[];
+}
+
+
+interface PostData {
+    title: string;
+    fileName: string;
+    // Add other properties here
+}
+
+interface TaggedPost {
+    data: PostData;
+    slug: string;
+}
+
+interface BlogTagProps {
+    posts: TaggedPost[];
+    title: string;
+    description: string;
+    tag: string;
 }

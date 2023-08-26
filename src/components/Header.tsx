@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import Link from "next/link";
+import Button from "@/components/Button";
 
 type ValidPath = `/${string}`; // Type for valid paths starting with slash
 
@@ -15,7 +17,48 @@ const menu: MenuItem = {
   Music: "/music",
 };
 
+const themes = [
+  "light",
+  "dark",
+  "cupcake",
+  "bumblebee",
+  "emerald",
+  "corporate",
+  "synthwave",
+  "retro",
+  "cyberpunk",
+  "valentine",
+  "halloween",
+  "garden",
+  "forest",
+  "aqua",
+  "lofi",
+  "pastel",
+  "fantasy",
+  "wireframe",
+  "black",
+  "luxury",
+  "dracula",
+  "cmyk",
+  "autumn",
+  "business",
+  "acid",
+  "lemonade",
+  "night",
+  "coffee",
+  "winter",
+];
+
 const Header: React.FC = () => {
+  const [currentThemeIndex, setCurrentThemeIndex] = useState(0);
+
+  const toggleTheme = () => {
+    console.log("toggle theme");
+    setCurrentThemeIndex((prevIndex) => (prevIndex + 1) % themes.length);
+    const newTheme = themes[currentThemeIndex];
+    document.documentElement.setAttribute("data-theme", newTheme);
+  };
+
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -38,28 +81,32 @@ const Header: React.FC = () => {
           >
             {Object.keys(menu).map((key) => (
               <li key={key}>
-                <a href={menu[key]} className="hover:bg-base-200">
+                <Link className="hover:bg-base-200" href={menu[key]}>
                   {key}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">Ehsan Pourhadi</a>
+        <Link className="btn btn-ghost normal-case text-xl" href="/">
+          Ehsan Pourhadi
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           {Object.keys(menu).map((key) => (
             <li key={key}>
-              <a href={menu[key]} className="hover:bg-base-200 text-base">
+              <Link className="hover:bg-base-200 text-base" href={menu[key]}>
                 {key}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn"><svg xmlns="http://www.w3.org/2000/svg"  width="32" height="32" viewBox="0 0 60 60"><path d="m45.563 29.174-22-15A1 1 0 0 0 22 15v30a.999.999 0 0 0 1.563.826l22-15a1 1 0 0 0 0-1.652zM24 43.107V16.893L43.225 30 24 43.107z"/><path d="M30 0C13.458 0 0 13.458 0 30s13.458 30 30 30 30-13.458 30-30S46.542 0 30 0zm0 58C14.561 58 2 45.439 2 30S14.561 2 30 2s28 12.561 28 28-12.561 28-28 28z"/></svg></a>
+        <Button onClick={toggleTheme} className="btn">
+          Change Theme
+        </Button>
       </div>
     </div>
   );

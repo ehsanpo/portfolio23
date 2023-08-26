@@ -16,14 +16,15 @@ const Button: FC<ButtonProps> = ({
   to = "/",
   onClick,
 }) => {
-  const buttonLabel = "EPX1"; // You can update this value
+  const buttonLabel = "EPX130"; // You can update this value
+  console.log("Button: ", type, to, onClick);
 
   if (type === "button") {
     return (
       <button onClick={onClick} type={type} className={"btn " + className}>
         <span className="btn__content">{children ? children : ""}</span>
         <span className="btn__glitch"></span>
-        <span className="btn__label">{buttonLabel}20</span>
+        <span className="btn__label">{buttonLabel}</span>
       </button>
     );
   }
@@ -32,7 +33,7 @@ const Button: FC<ButtonProps> = ({
       <Link href={to} className={"btn " + className}>
         <span className="btn__content">{children ? children : ""}</span>
         <span className="btn__glitch"></span>
-        <span className="btn__label">{buttonLabel}20</span>
+        <span className="btn__label">{buttonLabel}</span>
       </Link>
     );
   }

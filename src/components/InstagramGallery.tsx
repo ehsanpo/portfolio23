@@ -11,8 +11,9 @@ export default function About() {
   }, []);
 
   return (
-    <section className="text-gray-600 body-font">
-      <div className="container mx-auto flex py-7 md:flex-row flex-col items-center">
+    <section className="body-font">
+      <div className="container mx-auto  py-3 ">
+        <h3 className="text-2xl">Instagram Feed</h3>
         <InstagramGallery
           accessToken={process.env.NEXT_PUBLIC_INSTAGRAM_ACCESS_TOKEN}
           pagination={true}

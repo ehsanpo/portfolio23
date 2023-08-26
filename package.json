@@ -10,6 +10,11 @@
     "copyimages": "node ./bin/copy-images.mjs",
     "lint": "next lint"
   },
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false
+  },
   "dependencies": {
     "@codersrank/summary": "^0.9.13",
     "@types/node": "20.5.0",

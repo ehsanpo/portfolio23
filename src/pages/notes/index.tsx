@@ -5,41 +5,29 @@ import SeO from "@/components/Seo";
 import PostBlock from "@/components/PostBlock";
 import fs from "fs";
 import matter from "gray-matter";
+import Section from "@/components/Section";
 
-const Portfolio = ({ data }) => (
+const Portfolio = ({ data, content }) => (
   <>
     <SeO title="Developer Portfolio" />
- 
-    <div className="page-header">
-      <div className="wrapper">
-        <h1 className="display">Blog</h1>
+
+    <Section className="page-header lg:px-8 mt-24 sm:mt-32 lg:mt-4 ">
+      <h1 className="text-1xl font-bold ">Blog</h1>
+      <h2 className="mt-3 text-4xl font-bold ">The latest articles and news</h2>
+
+      <div className="mt-3 max-w-3xl text-xl">
+        <p>
+          My tech-focused blog shares my web development journey, insights on
+          modern/future tech, and tools for an enhanced internet experience.
+          Join the knowledge journey!
+        </p>
       </div>
-    </div>
+    </Section>
 
     <section className="bg-color-1">
-      <div className="wrapper">
-        <div className="wrapper-m">
-          <p>
-            I write this blog personally focused mostly on tech-related
-            articles, but I sometimes write about my day to day experience as a
-            web developer. I feel that this is an excellent way to channel my
-            ideas and thoughts through this blog.
-          </p>
-          <p>
-            I write what I feel is essential on current modern technology, or
-            what the future technology beholds. And maybe some special
-            tools/things that can be used to create a better internet experience
-          </p>
-          <p>
-            It is incredible to know what we don’t know. I think that those with
-            the thirst for knowledge can change this world. I have that thirst,
-            and I quench it by not only learning about new technology and other
-            things, I also share it with you, through this blog.
-          </p>
-        </div>
-      </div>
+      <div className="wrapper"></div>
     </section>
-    <PostBlock data={data} />
+    <PostBlock data={data} excerpt />
   </>
 );
 export default Portfolio;
@@ -52,11 +40,12 @@ export async function getStaticProps() {
       `Content/blog/${fileName}/${fileName}.md`,
       "utf-8"
     );
-    const { data: frontmatter } = matter(readFile);
+    const { data: frontmatter, content } = matter(readFile);
     frontmatter.fileName = fileName;
     return {
       slug: frontmatter.permalink,
       data: frontmatter,
+      content,
     };
   });
   const sortedpost = posts.sort(

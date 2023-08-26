@@ -4,34 +4,26 @@ import SeO from "@/components/Seo";
 import Portfolio from "@/components/Portfolio";
 import fs from "fs";
 import matter from "gray-matter";
+import Section from "@/components/Section";
 
 const PortfolioPage = ({ portfolioBlockData }) => {
   return (
     <>
       <SeO title="Developer Portfolio" />
-      <div className="page-header">
-        <div className="wrapper">
-          <h1 className="display">Portfolio</h1>
+
+      <Section className="page-header lg:px-8 mt-24 sm:mt-32 lg:mt-4 ">
+        <h1 className="text-1xl font-bold ">Portfolio</h1>
+        <h2 className="mt-3 text-4xl font-bold ">The latest work</h2>
+
+        <div className="mt-3 max-w-3xl text-xl">
+          <p>
+            Explore my portfolio showcasing top-notch projects reflecting my
+            expertise as a developer. From front-end to back-end, I craft
+            solutions that prioritize user satisfaction. Contact me for
+            inquiries.
+          </p>
         </div>
-      </div>
-      <section className="bg-color-1">
-        <div className="wrapper">
-          <div className="wrapper-m">
-            <div>
-              Welcome to my online portfolio! As a developer, I am committed to
-              creating high-quality projects that focus on the complete
-              satisfaction of the end user. My skillset includes front-end,
-              back-end, and site maintenance, as well as experience as a system
-              administrator. <br />
-              On this page, you will find a selection of my best work. I have
-              included a variety of projects that showcase my skills and
-              abilities, and I hope you will enjoy exploring them. If you have
-              any questions or would like to discuss a potential project, please
-              don't hesitate to contact me. Thank you for visiting!
-            </div>
-          </div>
-        </div>
-      </section>
+      </Section>
       <Portfolio data={portfolioBlockData} />
     </>
   );
