@@ -23,7 +23,7 @@ export default function BlogTag({
 
 export async function getStaticProps({ params }: { params: { tags: string } }) {
   const posts = await getAllPostsWithFrontMatter("blog", params.tags);
-  console.log(posts);
+
   return {
     props: {
       posts,

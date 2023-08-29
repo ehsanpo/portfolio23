@@ -2,7 +2,7 @@
 title: 'Generative Art and Music'
 date: '2022-03-06'
 status: publish
-permalink: /blog/generatrive-art-and-music
+permalink: /generatrive-art-and-music
 author: Ehsan
 excerpt: ''
 type: post

@@ -2,7 +2,7 @@
 title: "Music Visualization with three.js"
 date: "2022-06-12"
 status: publish
-permalink: /blog/music-visualization
+permalink: /music-visualization
 author: Ehsan
 excerpt: ""
 type: post

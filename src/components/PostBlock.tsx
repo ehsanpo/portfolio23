@@ -5,13 +5,13 @@ import reactStringReplace from "react-string-replace";
 import Image from "next/image";
 
 const Index = ({ data, onHome = false, excerpt = false }) => {
-  console.log(data);
   return (
     <div className="mx-auto container  mt-24 sm:mt-32 lg:mt-40">
       <div className="mx-auto  lg:max-w-none">
         <div className="space-y-24 lg:space-y-32">
           {data.map((item) => {
             const imgLink = item.data.permalink.replace("/notes/", "/images/");
+            const permalink = "/notes" + item.data.permalink;
             const content = excerpt
               ? item.content.substr(0, 170)
               : item.content;
@@ -62,9 +62,7 @@ const Index = ({ data, onHome = false, excerpt = false }) => {
                 <div className="relative lg:-mx-4 lg:flex lg:justify-end">
                   <div className="pt-10 lg:w-2/3 lg:flex-none lg:px-4 lg:pt-0">
                     <h2 className="font-display text-2xl font-semibold text-neutral-950">
-                      <a href="/blog/future-of-web-development">
-                        {item.data.title}
-                      </a>
+                      <a href={permalink}>{item.data.title}</a>
                     </h2>
                     <dl className="lg:absolute lg:left-0 lg:top-0 lg:w-1/3 lg:px-4">
                       <dt className="sr-only">Published</dt>
@@ -73,7 +71,7 @@ const Index = ({ data, onHome = false, excerpt = false }) => {
                       </dd>
                       <dt className="sr-only">Author</dt>
                       <dd className="mt-2 flex gap-x-2">
-                        <div className="flex-none overflow-hidden rounded-xl bg-neutral-100">
+                        <div className="flex-none overflow-hidden rounded-xl bg-base-200">
                           <img
                             alt=""
                             loading="lazy"
@@ -97,7 +95,7 @@ const Index = ({ data, onHome = false, excerpt = false }) => {
                     <a
                       className="btn mt-4"
                       aria-label={item.data.title}
-                      href={item.data.permalink}
+                      href={permalink}
                     >
                       <span className="relative top-px">Read more</span>
                     </a>

@@ -17,7 +17,6 @@ const Button: FC<ButtonProps> = ({
   onClick,
 }) => {
   const buttonLabel = "EPX130"; // You can update this value
-  console.log("Button: ", type, to, onClick);
 
   if (type === "button") {
     return (

@@ -53,7 +53,6 @@ const Header: React.FC = () => {
   const [currentThemeIndex, setCurrentThemeIndex] = useState(0);
 
   const toggleTheme = () => {
-    console.log("toggle theme");
     setCurrentThemeIndex((prevIndex) => (prevIndex + 1) % themes.length);
     const newTheme = themes[currentThemeIndex];
     document.documentElement.setAttribute("data-theme", newTheme);
@@ -104,7 +103,7 @@ const Header: React.FC = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Button onClick={toggleTheme} className="btn">
+        <Button onClick={() => toggleTheme()} className="btn">
           Change Theme
         </Button>
       </div>

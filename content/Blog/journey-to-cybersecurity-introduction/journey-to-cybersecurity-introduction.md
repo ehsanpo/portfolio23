@@ -2,7 +2,7 @@
 title: 'Journey to Cybersecurity Introduction'
 date: '2020-01-10'
 status: publish
-permalink: /blog/journey-to-cybersecurity-introduction
+permalink: /journey-to-cybersecurity-introduction
 author: Ehsan
 excerpt: ''
 type: post

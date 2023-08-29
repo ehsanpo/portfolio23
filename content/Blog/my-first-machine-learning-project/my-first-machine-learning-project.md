@@ -2,7 +2,7 @@
 title: 'My first Machine Learning project'
 date: '2019-04-12'
 status: publish
-permalink: /blog/my-first-machine-learning-project
+permalink: /my-first-machine-learning-project
 author: Ehsan
 excerpt: ''
 type: post

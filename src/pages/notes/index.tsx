@@ -43,7 +43,7 @@ export async function getStaticProps() {
     const { data: frontmatter, content } = matter(readFile);
     frontmatter.fileName = fileName;
     return {
-      slug: frontmatter.permalink,
+      slug: "/notes/" + frontmatter.permalink,
       data: frontmatter,
       content,
     };

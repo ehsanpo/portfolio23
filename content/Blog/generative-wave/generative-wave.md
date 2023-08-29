@@ -2,7 +2,7 @@
 title: "Generative Waves"
 date: "2022-06-12"
 status: publish
-permalink: /blog/generatrive-waves
+permalink: /generative-wave
 author: Ehsan
 excerpt: ""
 type: post

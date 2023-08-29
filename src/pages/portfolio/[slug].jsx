@@ -4,12 +4,13 @@ import matter from "gray-matter";
 import Template from "@/components/templates/portfolio.js";
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync("Content/Portfolio");
+  const files = fs.readdirSync("content/Portfolio");
   const paths = files.map((fileName) => ({
     params: {
       slug: fileName.replace(".md", ""),
     },
   }));
+  console.log("paths: ", paths);
   return {
     paths,
     fallback: false,

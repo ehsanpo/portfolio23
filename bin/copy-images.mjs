@@ -3,10 +3,11 @@ import path from "path";
 import fsExtra from "fs-extra";
 
 const fsPromises = fs.promises;
-const targetDir = "./public/images/portfolio";
-const postsDir = "./Content/portfolio";
+const targetDir = "./public/images";
+const postsDirx = "./Content/portfolio";
+const BlogDir = "./Content/blog";
 
-async function copyImagesToPublic(images, slug) {
+async function copyImagesToPublic(images, slug, postsDir) {
   for (const image of images) {
     await fsPromises.copyFile(
       `${postsDir}/${slug}/${image}`,
@@ -15,11 +16,17 @@ async function copyImagesToPublic(images, slug) {
   }
 }
 
-async function createPostImageFoldersForCopy() {
+async function createPostImageFoldersForCopy(postsDir) {
   // Get every post folder: post-one, post-two etc.
-  const postSlugs = await fsPromises.readdir(postsDir);
+  const portgolioSlugs = await fsPromises.readdir(postsDir);
+  let options = [];
+  portgolioSlugs.forEach((file) => {
+    if (file[0] != ".") {
+      options.push(file);
+    }
+  });
 
-  for (const slug of postSlugs) {
+  for (const slug of options) {
     const allowedImageFileExtensions = [
       ".png",
       ".jpg",
@@ -40,10 +47,12 @@ async function createPostImageFoldersForCopy() {
       // Create a folder for images of this post inside public
       await fsPromises.mkdir(`${targetDir}/${slug}`);
 
-      await copyImagesToPublic(images, slug);
+      await copyImagesToPublic(images, slug, postsDir);
     }
   }
 }
 
 await fsExtra.emptyDir(targetDir);
-await createPostImageFoldersForCopy();
+await createPostImageFoldersForCopy("./Content/portfolio");
+await createPostImageFoldersForCopy("./Content/blog");
+console.log("Done! XXX");

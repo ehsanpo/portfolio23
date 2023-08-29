@@ -2,7 +2,7 @@
 title: 'How to check your wordpress sites security with WPScan'
 date: '2020-01-09'
 status: publish
-permalink: /blog/how-to-check-your-wordpress-sites-security-with-wpscan
+permalink: /how-to-check-your-wordpress-sites-security-with-wpscan
 author: Ehsan
 excerpt: ''
 type: post

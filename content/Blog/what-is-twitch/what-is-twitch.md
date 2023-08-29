@@ -2,7 +2,7 @@
 title: 'What is Twitch?'
 date: '2019-06-09'
 status: publish
-permalink: /blog/what-is-twitch
+permalink: /what-is-twitch
 author: Ehsan
 excerpt: ''
 type: post

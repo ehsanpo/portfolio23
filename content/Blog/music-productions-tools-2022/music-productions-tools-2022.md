@@ -2,7 +2,7 @@
 title: 'Music Productions Tools in 2022'
 date: '2022-05-17'
 status: publish
-permalink: /blog/music-productions-tools-2022
+permalink: /music-productions-tools-2022
 author: Ehsan
 excerpt: ''
 type: post

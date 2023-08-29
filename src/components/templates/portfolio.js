@@ -31,7 +31,6 @@ const PrevArticle = ({ data }) => {
 };
 
 const IndexPage = ({ data, content }) => {
-  console.log("about to return", data, content);
   const portfolioBlockData = data.post;
   const permalink = "/images/portfolio/" + data.post.fileName + "/";
   const portfolioBlockBody = content;
@@ -43,12 +42,6 @@ const IndexPage = ({ data, content }) => {
       clearTimeout(open);
     }, 1000);
   }, []);
-
-  <div class="min-h-screen flex">
-    <nav class="w-56 flex-none ...">Sidebar</nav>
-
-    <main class="flex-1 min-w-0 overflow-auto ...">...</main>
-  </div>;
 
   return (
     <Section>

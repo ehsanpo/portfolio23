@@ -11,7 +11,6 @@ import Awards from "@/components/Awards";
 import Clients from "@/components/Clients";
 
 export default function Home({ portfolioData, clients }: HomeProps) {
-  console.log(clients);
   return (
     <main>
       <Hero

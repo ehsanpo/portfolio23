@@ -2,7 +2,7 @@
 title: '10 awesome most have freeware for your Mac'
 date: '2019-04-15'
 status: publish
-permalink: /blog/10-awesome-most-have-freeware-for-your-mac
+permalink: /10-awesome-most-have-freeware-for-your-mac
 author: Ehsan
 excerpt: ''
 type: post

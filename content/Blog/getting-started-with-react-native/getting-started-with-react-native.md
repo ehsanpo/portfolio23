@@ -2,7 +2,7 @@
 title: 'Getting started with React Native'
 date: '2020-01-14'
 status: publish
-permalink: /blog/getting-started-with-react-native
+permalink: /getting-started-with-react-native
 author: Ehsan
 excerpt: ''
 type: post

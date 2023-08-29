@@ -2,7 +2,7 @@
 title: 'Generative Art - Draw a circle'
 date: '2022-01-08'
 status: publish
-permalink: /blog/generative-art-circle
+permalink: /generative-art-circle
 author: Ehsan
 excerpt: ''
 type: post

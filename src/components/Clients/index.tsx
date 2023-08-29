@@ -8,7 +8,6 @@ export default function Clients({ clients }: HomeProps) {
   const [clientsToShow, setClientsToShow] = useState(6);
 
   const handleShowMore = () => {
-    console.log(showMore);
     setShowMore((show) => !show);
   };
 
@@ -29,8 +28,8 @@ export default function Clients({ clients }: HomeProps) {
               >
                 <div className="bg-gray-200 p-4 rounded-lg">
                   <span className="text-gray-800">{client}</span>
-                  <div class="corners top"></div>
-                  <div class="corners bottom"></div>
+                  <div className="corners top"></div>
+                  <div className="corners bottom"></div>
                 </div>
               </div>
             );
