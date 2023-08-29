@@ -10,9 +10,10 @@ const Post = ({ data, content }) => {
   const regex = /(!\[(.*?)\]\((.*?)\))/g;
   let cleanContent = reactStringReplace(content, regex, (match, i) => {
     if (match[0] == "!") return null;
+    console.log(imgLink);
     return (
       <Image
-        src={imgLink + match.replace(".", "")}
+        src={"/images" + imgLink + match.replace(".", "")}
         alt={match}
         width={1200}
         height={200}
@@ -31,13 +32,13 @@ const Post = ({ data, content }) => {
   return (
     <>
       <Seo title={data.post.title} />
-      <Section className="page-header ">
+      <Section maxWidth="m" className="page-header ">
         <div className="wrapper">
           <h1 className="display">{data.post.title}</h1>
         </div>
       </Section>
 
-      <Section>
+      <Section maxWidth="m">
         <div className="wrapper">
           <div className="wrapper-m">
             <div className="blogContent">{cleanContent}</div>

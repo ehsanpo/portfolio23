@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "./Button";
 import Image from "next/image";
+import Heading from "./Heading";
 interface TestimonialItem {
   id: number;
   name: string;
@@ -214,7 +215,7 @@ const TestimonialSingle: React.FC<{ item: TestimonialItem }> = ({ item }) => {
   const [readMore, setReadMore] = useState(false);
 
   return (
-    <blockquote className=" w-full mx-auto rounded-lg bg-base-200 text-base-content border border-base-300 p-3 font-light mb-2">
+    <blockquote className=" w-full mx-auto rounded-lg hover:border-accent bg-base-200 transition text-base-content border border-base-300 p-3 font-light mb-2">
       <div className="w-full flex mb-4 items-center">
         <div className="overflow-hidden rounded-full w-6 h-6 bg-base-200 border border-accent">
           <Image src={item.img} alt="" width={200} height={200} />
@@ -224,7 +225,9 @@ const TestimonialSingle: React.FC<{ item: TestimonialItem }> = ({ item }) => {
         </div>
       </div>
       <div className="w-full">
-        <p className={`${readMore ? "text-md" : "text-sm"}  leading-tight`}>
+        <p
+          className={` mb-2 ${readMore ? "text-md" : "text-sm"}  leading-tight`}
+        >
           <span className="text-lg leading-none italic font-bold mr-1">“</span>
           {readMore ? item.desc : item.short}
 
@@ -245,14 +248,11 @@ const Testimonial: React.FC = () => {
       <div className="w-full px-5 py-16 md:py-24">
         <div className="w-full max-w-6xl mx-auto">
           <div className="text-center max-w-xl mx-auto">
-            <h1 className="text-6xl md:text-7xl font-bold mb-5">
+            <Heading size="xl" element="h2" padding="xl" center>
               What people <br />
               are saying.
-            </h1>
-            <h3 className="text-xl mb-5 font-light">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </h3>
-            <div className="text-center mb-10">
+            </Heading>
+            <div className="text-center mb-4">
               <span className="inline-block w-1 h-1 rounded-full bg-accent ml-1"></span>
               <span className="inline-block w-3 h-1 rounded-full bg-accent ml-1"></span>
               <span className="inline-block w-40 h-1 rounded-full bg-accent"></span>

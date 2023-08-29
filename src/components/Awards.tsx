@@ -6,95 +6,56 @@ import Link from "next/link";
 import Grid from "@/components/Grid";
 import InViewMonitor from "react-inview-monitor";
 import Button from "@/components/Button";
-import Image from "next/image";
-import image1 from "../../public/cannen-b.png";
-import image2 from "../../public/svenskadesign-b.png";
-import image3 from "../../public/guldagg-b.png";
 import Section from "./Section";
+import Card from "./Card";
+import Heading from "./Heading";
 
 const Award = () => {
   return (
     <Section>
-      <InViewMonitor
-        intoViewMargin="8%"
-        classNameNotInView="vis-hidden"
-        classNameInView="animated titleIn"
-        toggleClassNameOnInView
-      >
-        <h2 className="title yellow">Awards</h2>
-      </InViewMonitor>
+      <Heading size="xl" element="h2" padding="xl" center>
+        Awards
+      </Heading>
+
       <Grid columns={3}>
-        <div>
-          <div>
-            <InViewMonitor
-              intoViewMargin="10%"
-              classNameNotInView="vis-hidden"
-              classNameInView="animated titleIn"
-              toggleClassNameOnInView
-            >
-              <Image alt="Svenska design" className="award-img" src={image2} />
-              <div>
-                <h3 className="text-2xl">Svenska design</h3>
-                Gold Category Digital Design
-                <br />
-              </div>
-              <Button
-                className="btn btn--b btn--link"
-                to="/portfolio/malmo-saluhall/"
-              >
-                View project
-              </Button>
-            </InViewMonitor>
-          </div>
-        </div>
-        <div>
-          <div>
-            <InViewMonitor
-              intoViewMargin="10%"
-              classNameNotInView="vis-hidden"
-              classNameInView="animated titleIn"
-              toggleClassNameOnInView
-            >
-              <Image alt="Cannes lions" className="award-img" src={image1} />
-              <div className="content">
-                <h3 className="text-2xl">Cannes lions</h3>
-                Silver Lion in Promo & Activation, Bronze Lion in Cyber &
-                Shortlist in Media
-              </div>
-              <Button
-                className="btn btn--b btn--link"
-                to="/portfolio/toolpool/"
-              >
-                View project
-              </Button>
-            </InViewMonitor>
-          </div>
-        </div>
-        <div>
-          <div>
-            <InViewMonitor
-              intoViewMargin="10%"
-              classNameNotInView="vis-hidden"
-              classNameInView="animated titleIn"
-              toggleClassNameOnInView
-            >
-              <Image alt="Guldägget" className="award-img" src={image3} />
-              <div className="content">
-                <h3 className="text-2xl">Guldägget</h3>
-                Gold Category PR & Silver Categories Digital and Alternative
-                Media
-              </div>
-              <Button
-                className="btn btn--b btn--link"
-                to="/portfolio/toolpool/"
-              >
-                View project
-              </Button>
-            </InViewMonitor>
-          </div>
-        </div>
+        <Card
+          sec
+          title="Svenska design"
+          desc="Gold Category Digital Design "
+          img={{
+            src: "/static/svenskadesign-b.png",
+            alt: "Svenska design",
+            width: 80,
+            height: 80,
+          }}
+        />
+
+        <Card
+          sec
+          title="Cannes lions"
+          desc=" Silver Lion in Promo & Activation, Bronze Lion in Cyber &
+            Shortlist in Media"
+          img={{
+            src: "/static/cannen-b.png",
+            alt: "Cannes lions",
+            width: 80,
+            height: 80,
+          }}
+        />
+
+        <Card
+          sec
+          title="Guldägget"
+          desc=" Gold Category PR & Silver Categories Digital and Alternative Media"
+          img={{
+            src: "/static/guldagg-b.png",
+            alt: "Guldägget",
+            width: 80,
+            height: 80,
+          }}
+        />
       </Grid>
-      <div className="center">
+      <div className="mt-4 flex flex-col items-center justify-center">
         <Button type="link" to="/about" className="btn--secondary">
           About Ehsan
         </Button>

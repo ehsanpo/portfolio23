@@ -53,6 +53,6 @@ async function createPostImageFoldersForCopy(postsDir) {
 }
 
 await fsExtra.emptyDir(targetDir);
-await createPostImageFoldersForCopy("./Content/portfolio");
-await createPostImageFoldersForCopy("./Content/blog");
-console.log("Done! XXX");
+await createPostImageFoldersForCopy("./content/portfolio");
+await createPostImageFoldersForCopy("./content/blog");
+console.log("Done coping images");

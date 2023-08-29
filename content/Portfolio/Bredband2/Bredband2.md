@@ -31,7 +31,7 @@ bilder:
   - "bredband2-v2.png"
   - "1.jpg"
 port_date:
-  - "2021 - 2023"
+  - "2023"
 ---
 
 <h2> Case Study: Driving Digital Transformation and Enhancing Customer Experience at Bredband2</h2>

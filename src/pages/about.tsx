@@ -14,7 +14,7 @@ export default function About() {
         subHeadline="Welcome to my digital world! I'm Ehsan Pourhadi, a versatile Developer, Designer, and Producer with over ten years of experience crafting innovative solutions for the digital realm."
       />
       <Section primary>
-        <div className="container px-5 py-7 mx-auto flex flex-wrap">
+        <div className="container px-5 py-6 mx-auto flex flex-wrap">
           <h2 className="sm:text-3xl text-2xl font-medium title-font md:w-2/5">
             Background
           </h2>
@@ -45,12 +45,9 @@ export default function About() {
           </div>
         </div>
       </Section>
-      <Section maxWidth="m">
-        <div className="container px-5 py-24 mx-auto flex flex-wrap"></div>
-      </Section>
 
       <Section>
-        <div className="container px-5 py-7 mx-auto flex flex-wrap">
+        <div className="container px-5 py-6 mx-auto flex flex-wrap">
           <h2 className="sm:text-3xl text-2xl  font-medium title-font mb-2 md:w-2/5">
             Philosophy
           </h2>
@@ -111,7 +108,7 @@ export default function About() {
         </div>
       </Section>
       <Section secondary>
-        <div className="container px-5 py-7 mx-auto flex flex-wrap">
+        <div className="container px-5 py-6 mx-auto flex flex-wrap">
           <h2 className="sm:text-3xl text-2xl font-medium title-font md:w-2/5">
             Motivators
           </h2>
@@ -152,8 +149,8 @@ export default function About() {
         </div>
       </Section>
       <Section>
-        <div className="flex w-full flex-col sm:flex-row">
-          <div className="md:w-3/6 mt-4 sm:mt-0 w-6/6">
+        <div className="mt-4 flex w-full flex-col gap-2 sm:flex-row">
+          <div className="md:w-3/6 mt-4  sm:mt-0 w-6/6">
             <Experience />
           </div>
           <div className="w-3/6">

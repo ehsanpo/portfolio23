@@ -1,11 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import Card from "@/components/Card";
+import Heading from "./Heading";
 
 interface PortfolioProps {
   data: {
     slug: string;
     data: {
+      port_date: string;
       permalink: string;
       title: string;
       description: string;
@@ -16,10 +18,14 @@ interface PortfolioProps {
     };
   }[];
 }
+const currentYear = new Date().getFullYear();
 
 const Portfolio: React.FC<PortfolioProps> = ({ data }) => {
   return (
-    <div className="mx-auto mx-auto container lg:justify-center  lg:px-8 mt-16">
+    <div className="mx-auto container lg:justify-center  lg:px-8 mt-16">
+      <Heading size="xl" element="h2" padding="xl" center>
+        Selected Work
+      </Heading>
       <div className="mx-auto  lg:max-w-none">
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
           {data.map((item) => (
@@ -35,8 +41,9 @@ const Portfolio: React.FC<PortfolioProps> = ({ data }) => {
                   item.data.background_image[0],
                 alt: item.data.title,
               }}
+              aspectRatio
               tags={item.data.tag}
-              new={item.data.new}
+              new={item.data.port_date[0] === currentYear.toString()}
               link={item.data.permalink}
             />
           ))}

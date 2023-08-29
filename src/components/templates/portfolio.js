@@ -32,7 +32,7 @@ const PrevArticle = ({ data }) => {
 
 const IndexPage = ({ data, content }) => {
   const portfolioBlockData = data.post;
-  const permalink = "/images/portfolio/" + data.post.fileName + "/";
+  const permalink = "/images/" + data.post.fileName + "/";
   const portfolioBlockBody = content;
   const [headerClose, setHeaderClose] = useState("");
 
@@ -44,7 +44,7 @@ const IndexPage = ({ data, content }) => {
   }, []);
 
   return (
-    <Section>
+    <>
       <article className="portfolio-page page">
         <div
           className="hero h-[calc(50vh)] place-items-end"
@@ -55,6 +55,7 @@ const IndexPage = ({ data, content }) => {
           }}
         >
           <div className="hero-overlay bg-opacity-60"></div>
+
           <div className="hero-content text-right text-neutral-content flex place-items-end ">
             <div className="max-w-md mx-4">
               <h1 className="mb-5 text-4xl font-bold">
@@ -65,86 +66,88 @@ const IndexPage = ({ data, content }) => {
             </div>
           </div>
         </div>
-        <section className="flex items-start ">
-          <aside className="sticky w-56 flex-none top-0">
-            <div>
+        <Section>
+          <div className="flex items-start ">
+            <aside className="sticky w-1/3 flex-none top-0 pr-3">
               <div>
-                <h4>
-                  <span>Date</span>
-
-                  {portfolioBlockData.port_date}
-                </h4>
-                <h4>
-                  <span>Client</span>
-
-                  {portfolioBlockData.client}
-                </h4>
-                {portfolioBlockData.agancy && (
+                <div>
                   <h4>
-                    <span>Agancy</span>
+                    <span>Date</span>
 
-                    {portfolioBlockData.agancy}
+                    {portfolioBlockData.port_date}
                   </h4>
-                )}
-              </div>
-              <div>
-                <div className="tags">
-                  <span>01</span> Roles
-                  {portfolioBlockData.category.map((cat) => (
-                    <span key={cat}>{cat} </span>
-                  ))}
+                  <h4>
+                    <span>Client</span>
+
+                    {portfolioBlockData.client}
+                  </h4>
+                  {portfolioBlockData.agancy && (
+                    <h4>
+                      <span>Agancy</span>
+
+                      {portfolioBlockData.agancy}
+                    </h4>
+                  )}
+                </div>
+                <div>
+                  <div className="tags">
+                    <span>01</span> Roles
+                    {portfolioBlockData.category.map((cat) => (
+                      <span key={cat}>{cat} </span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <div className="tags">
+                    <span>02</span> Tech
+                    {portfolioBlockData.tag.map((tag, index) => (
+                      <Link key={index} href={`/portfolio/tags/${tag}`}>
+                        <span key={tag}>{tag} </span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
-              <div>
-                <div className="tags">
-                  <span>02</span> Tech
-                  {portfolioBlockData.tag.map((tag, index) => (
-                    <Link key={index} href={`/portfolio/tags/${tag}`}>
-                      <span key={tag}>{tag} </span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </aside>
-          <div className=" gallery-wrapper flex-1">
-            {portfolioBlockBody && (
-              <div>
-                <span>4</span> About
-                <div
-                  className="blog-content"
-                  dangerouslySetInnerHTML={{ __html: portfolioBlockBody }}
-                />
-              </div>
-            )}
-
-            <div>
-              <span>5</span> Gallery
-              {portfolioBlockData.bilder.map((bild) => (
-                <div className="image-wrapper" key={bild.id}>
-                  <NextImage
-                    // style={{
-                    // //   color: bild.colors.vibrant,
-                    //   boxShadow: "0 0 30px " + bild.colors.vibrant,
-                    // }}
-                    // width={1200}
-
-                    fill
-                    src={permalink + bild}
+            </aside>
+            <div className=" gallery-wrapper flex-1">
+              {portfolioBlockBody && (
+                <div>
+                  <span>4</span> About
+                  <div
+                    className="blog-content"
+                    dangerouslySetInnerHTML={{ __html: portfolioBlockBody }}
                   />
                 </div>
-              ))}
+              )}
+
+              <div>
+                <span>5</span> Gallery
+                {portfolioBlockData.bilder.map((bild) => (
+                  <div className="image-wrapper" key={bild.id}>
+                    <NextImage
+                      // style={{
+                      // //   color: bild.colors.vibrant,
+                      //   boxShadow: "0 0 30px " + bild.colors.vibrant,
+                      // }}
+                      // width={1200}
+
+                      fill
+                      src={permalink + bild}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </section>
-        <section>
+        </Section>
+        <Section>
           <div className="wrapper pagination">
             <NextArticle data={data} />
             <PrevArticle data={data} />
           </div>
-        </section>
+        </Section>
       </article>
-    </Section>
+    </>
   );
 };
 

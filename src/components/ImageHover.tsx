@@ -3,18 +3,15 @@ import hoverEffect from "hover-effect";
 
 const LocalImage = () => {
   const container = useRef();
-  const ImageEffectArray = [
-    "../images/hover/111.jpg",
-    "../images/hover/112.jpg",
-  ];
+  const ImageEffectArray = ["../im//111.jpg", "../img/112.jpg"];
   const randomElement =
     ImageEffectArray[Math.floor(Math.random() * ImageEffectArray.length)];
   useEffect(() => {
     var myAnimation = new hoverEffect({
       parent: container.current,
       intensity: 0.3,
-      image1: "../images/ehsan/112.jpg",
-      image2: "../images/ehsan/116.jpg",
+      image1: "../img/ehsan1.jpg",
+      image2: "../img/ehsan2.jpg",
       displacementImage: randomElement,
     });
   }, [container, randomElement]);
