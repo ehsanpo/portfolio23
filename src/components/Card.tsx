@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Heading from "./Heading";
 
 interface CardProps {
   title: string;
@@ -11,6 +12,8 @@ interface CardProps {
   link?: string;
   sec?: boolean;
   aspectRatio?: boolean;
+  children?: React.ReactNode;
+  className?: string;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -21,14 +24,21 @@ const Card: React.FC<CardProps> = ({
   new: isNew,
   link,
   aspectRatio,
+  children,
+  sec,
+  className,
 }) => {
   const cardContent = (
-    <article className="card h-full w-96 bg-base-300 shadow-xl border transition hover:border-accent border-base-300">
+    <article
+      className={`${className} ${
+        sec ? "bg-primary text-primary-content" : ""
+      }  card h-full w-96 bg-base-300 shadow-xl border transition hover:border-accent border-base-300`}
+    >
       {img && (
         <figure>
           <Image
             style={{ aspectRatio: aspectRatio ? "16/9" : "unset" }}
-            className={!aspectRatio ? "mt-4" : ""}
+            className={!aspectRatio ? "mt-4 " : "w-full"}
             src={img.src}
             alt={img.alt}
             width={img.width ? img.width : 400}
@@ -38,13 +48,21 @@ const Card: React.FC<CardProps> = ({
       )}
 
       <div className="card-body">
-        <header>
-          <h2 className="card-title">
-            {title}
-            {isNew && <div className="badge badge-secondary">NEW</div>}
-          </h2>
-        </header>
-        <div>{desc}</div>
+        {title && (
+          <header>
+            <Heading
+              className="card-title"
+              element="h2"
+              size="m"
+              padding="none"
+            >
+              {title}
+              {isNew && <div className="badge badge-secondary">NEW</div>}
+            </Heading>
+          </header>
+        )}
+        {children}
+        {desc && <div>{desc}</div>}
         {tags && (
           <div className="card-actions justify-end">
             {tags.slice(0, 3).map((tag) => (

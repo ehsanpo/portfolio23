@@ -1,13 +1,19 @@
 import React from "react";
 import Head from "next/head";
+import CodersrankSummary from "@codersrank/summary";
 
 function SEO({ description, lang, meta, title }) {
-
+  return (
+    <div className="mixed-chart">
+      {typeof window !== "undefined" && (
+        <CodersrankSummary username="ehsanpo" badges="3" show-avatar />
+      )}
+    </div>
+  );
+  return <CodersrankSummary username="ehsanpo" badges="3" show-avatar />;
   // https://codesandbox.io/s/coderranks-summary-forked-nrrywg?file=/src/index.ts
   return (
-    
-<div className="codersrank-summary-badges">
-      
+    <div className="codersrank-summary-badges">
       <div className="codersrank-summary-badge codersrank-summary-badge-v1">
         <div className="codersrank-summary-badge-rank">Top 1</div>
         <div className="codersrank-summary-badge-technology">
@@ -18,7 +24,7 @@ function SEO({ description, lang, meta, title }) {
         </div>
         <div className="codersrank-summary-badge-location">Sweden</div>
       </div>
-    
+
       <div className="codersrank-summary-badge codersrank-summary-badge-v1">
         <div className="codersrank-summary-badge-rank">Top 5</div>
         <div className="codersrank-summary-badge-technology">
@@ -29,7 +35,7 @@ function SEO({ description, lang, meta, title }) {
         </div>
         <div className="codersrank-summary-badge-location">Sweden</div>
       </div>
-    
+
       <div className="codersrank-summary-badge codersrank-summary-badge-v2 codersrank-summary-badge-seniority">
         <div className="codersrank-summary-badge-image">
           <img src="https://profile.codersrank.io/static/badgesV2/Seniority/SeniorDeveloper.svg" />
@@ -42,10 +48,8 @@ function SEO({ description, lang, meta, title }) {
           <span className="codersrank-summary-badge-name">JavaScript</span>
         </div>
       </div>
-    
-  </div>
+    </div>
   );
 }
 
 export default SEO;
-

@@ -40,7 +40,7 @@ const Index = ({ data, onHome = false, excerpt = false }) => {
             return (
               <article
                 key={item.data.id}
-                className="mt-7 pt-6 relative 
+                className="mt-4 pt-4 relative 
                 
                "
               >
@@ -67,7 +67,7 @@ const Index = ({ data, onHome = false, excerpt = false }) => {
                     <dl className="lg:absolute lg:left-0 lg:top-0 lg:w-1/3 lg:px-4">
                       <dt className="sr-only">Published</dt>
                       <dd className="absolute left-0 top-0 text-sm text-neutral-950 lg:static">
-                        <time dateTime="2023-04-06"> {item.data.date}</time>
+                        <time dateTime={item.data.date}> {item.data.date}</time>
                       </dd>
                       <dt className="sr-only">Author</dt>
                       <dd className="mt-2 flex gap-x-2">
@@ -81,7 +81,7 @@ const Index = ({ data, onHome = false, excerpt = false }) => {
                             src="https://studio.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fchelsea-hagon.073aa8f2.jpg&w=1920&q=75"
                           />
                         </div>
-                        <div className="text-sm text-neutral-950">
+                        <div className="text-sm text-neutral-content">
                           <div className="font-semibold">
                             {item.data.author}
                           </div>
@@ -89,7 +89,7 @@ const Index = ({ data, onHome = false, excerpt = false }) => {
                         </div>
                       </dd>
                     </dl>
-                    <p className="mt-2 max-w-2xl text-base text-neutral-600">
+                    <p className="mt-2 max-w-2xl text-base text-neutral-content ">
                       {cleanContent}
                     </p>
                     <a

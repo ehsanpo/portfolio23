@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Section from "@/components/Section";
 import "chart.js/auto";
-import { Radar } from "react-chartjs-2";
+
 import chart_data_overall from "@/../data/skills-data";
 import stacks_data from "@/../data/stacks-data";
-
+import Badges from "@/components/Badges";
 import Button from "@/components/Button";
 import Stack from "@/components/Stacks";
 import Image from "next/image";
@@ -30,66 +30,51 @@ const Skills = () => {
           </p>
         </div>
       </Section>
-      <Section maxWidth="m" paddingTop="l">
+      <Section secondary maxWidth="m" paddingTop="l">
         <Chart />
-        <Stats />
       </Section>
       <Section>
+        <Stats />
         <img
-          src="https://ghchart.rshah.org/409ba5/ehsanpo"
-          alt="2016rshah's Blue Github Chart"
+          src="https://ghchart.rshah.org/000000/ehsanpo"
+          alt="ehsanpo Github Chart"
           width={1400}
         />
       </Section>
 
       <Section>
-        <InViewMonitor
-          intoViewMargin="6%"
-          classNameNotInView="vis-hidden"
-          classNameInView="animated titleIn"
-          toggleClassNameOnInView
-        >
-          <h2 className="title red">Developer Stacks</h2>
-        </InViewMonitor>
-        <div className="wrapper">
-          <Stack />
-        </div>
+        <Stack />
       </Section>
 
-      <Section>
-        <InViewMonitor
-          intoViewMargin="6%"
-          classNameNotInView="vis-hidden"
-          classNameInView="animated titleIn"
-          toggleClassNameOnInView
-        >
-          <h2 className="title red">Certifications</h2>
-        </InViewMonitor>
+      <Section className="bg-grad1">
         <Certs />
       </Section>
 
       <TextAndImage
+        img={{ src: "/img/0_6.png", alt: "Online Self-Educated" }}
         headline="Online Self-Educated"
-        subHeadline="I usually watch a lot of youtube tutorials, I alltså use other sites like, Udemy, Lynda & Treehouse."
+        subHeadline="Dedicated to continuous self-improvement through online resources. Leveraging platforms like YouTube, Udemy, Lynda, and Treehouse for comprehensive learning."
       />
       <TextAndImage
+        img={{ src: "/img/0_5.png", alt: "Agile Development Processes" }}
+        className="bg-secondary text-secondary-content"
         imgOnLeft
         headline="Agile Development Processes"
-        subHeadline="I believe that agility is about moving quickly and adapting to change at a sustainable pace."
+        subHeadline="I uphold the value of agility, emphasizing swift progress and adeptly responding to change while maintaining a sustainable pace."
       />
       <TextAndImage
+        img={{ src: "/img/0_4.png", alt: "Continuous Development" }}
+        className="bg-accent text-accent-content"
         headline="Continuous Development"
-        subHeadline="Ability to get changes of all types—including new features, configuration changes, bug fixes and experiments—into production, or into the hands of users, safely and quickly in a sustainable way."
+        subHeadline="I possess the skill to seamlessly integrate diverse changes, encompassing features, configurations, bug fixes, and experiments, into production or user access, ensuring both safety and efficiency within a sustainable framework."
       />
 
-      <Section>
-        <div className="wrapper">
-          <img
-            width="1400"
-            height="700"
-            src="https://cr-skills-chart-widget.azurewebsites.net/api/api?username=ehsanpo&skills=JavaScript,HTML,CSS,JSON,Less,NodeJS,PHP,Python,ReactJS,Ruby,SCSS,SQL,Shell,TypeScript&bg=transparent"
-          />
-        </div>
+      <Section className="bg-primary text-primary-content">
+        <img
+          width="1400"
+          height="700"
+          src="https://cr-skills-chart-widget.azurewebsites.net/api/api?username=ehsanpo&skills=JavaScript,HTML,CSS,JSON,Less,NodeJS,PHP,Python,ReactJS,Ruby,SCSS,SQL,Shell,TypeScript&bg=transparent"
+        />
       </Section>
     </>
   );

@@ -11,6 +11,7 @@ interface ExperienceProps {
   };
   imgComponent?: ReactNode;
   imgOnLeft?: boolean;
+  className?: string;
 }
 
 const Experience: FC<ExperienceProps> = ({
@@ -20,10 +21,11 @@ const Experience: FC<ExperienceProps> = ({
   img,
   imgComponent,
   imgOnLeft = false,
+  className = "",
 }) => {
   return (
-    <section className=" body-font">
-      <div className="container mx-auto flex py-2 md:flex-row flex-col items-center">
+    <section className={`body-font ${className}`}>
+      <div className="container mx-auto flex py-6 md:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           {headline && (
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium ">
@@ -41,7 +43,7 @@ const Experience: FC<ExperienceProps> = ({
 
         <div
           className={` ${
-            imgOnLeft && "-order-1 "
+            imgOnLeft ? "-order-1 mr-6" : "ml-6"
           } lg:max-w-lg lg:w-full md:w-1/2 w-5/6`}
         >
           {img && (

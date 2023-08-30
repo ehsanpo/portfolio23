@@ -1,5 +1,6 @@
 import { InstagramGallery } from "instagram-gallery";
 import { useEffect } from "react";
+import Heading from "./Heading";
 
 export default function About() {
   useEffect(() => {
@@ -13,10 +14,11 @@ export default function About() {
   return (
     <section className="body-font">
       <div className="container mx-auto  py-3 ">
-        <h3 className="text-2xl">Instagram Feed</h3>
+        <Heading size="xl" element="h2" padding="xl" center>
+          Instagram Feed
+        </Heading>
         <InstagramGallery
           accessToken={process.env.NEXT_PUBLIC_INSTAGRAM_ACCESS_TOKEN}
-          pagination={true}
           count={24}
         />
       </div>

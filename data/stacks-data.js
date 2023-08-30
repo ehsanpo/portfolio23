@@ -38,13 +38,13 @@ const stacks_data = [
   {
     slug: "Music",
     labels: ["Reason Studios", "Bitwig", "Logic Pro", "BeatStep"],
-    icon: "/img/stacks/devop2.svg",
-    data: ["10", "7", "7", "10", "6"],
+    icon: "/img/stacks/music.svg",
+    data: ["10", "7", "10", "6"],
   },
   {
     slug: "Tools",
     labels: ["Git", "GraphQl", "Apollo", "ChatGPT", "CoPilot"],
-    icon: "/img/stacks/tools.svg",
+    icon: "/img/stacks/tools2.svg",
     data: ["10", "9", "9", "9", "9"],
   },
 ];

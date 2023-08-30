@@ -134,10 +134,10 @@ const Skills: React.FC = () => {
     <>
       <div className="bg-color-3">
         <div className="wrapper">
-          <div className="radar-right">
+          <div className="radar-right text-center">
             {chart_data.map((skill, index) => (
               <Button
-                className={`${skill.slug} ${
+                className={`m-1 ${skill.slug} ${
                   current_button === index.toString() ? "active" : ""
                 }`}
                 onClick={(e) => {

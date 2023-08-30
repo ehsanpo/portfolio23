@@ -5,7 +5,7 @@ interface HeaderProps {
   element: "h1" | "h2" | "h3" | "h4" | "h5";
   size?: "s" | "m" | "l" | "xl"; // Use s/m/l/xl values for size
   center?: boolean;
-  padding?: "s" | "m" | "l" | "xl";
+  padding?: "none" | "s" | "m" | "l" | "xl";
   className?: string;
 }
 
@@ -14,7 +14,7 @@ const Header: React.FC<HeaderProps> = ({
   element = "h1",
   size = "m", // Default to medium size if not provided
   center,
-  padding,
+  padding = "none",
   className,
 }) => {
   const sizeMapping = {
@@ -27,15 +27,16 @@ const Header: React.FC<HeaderProps> = ({
   const sizeClass = sizeMapping[size] || "text-base";
 
   const paddingMapping = {
+    none: "",
     s: "p-1",
     m: "p-2",
     l: "p-4",
     xl: "p-6",
   };
 
-  const paddingClass = paddingMapping[padding || "s"] || "p-1";
+  const paddingClass = paddingMapping[padding || "s"] || "";
 
-  const headingClasses = `font-bold ${sizeClass} ${
+  const headingClasses = `mb-1 font-bold ${sizeClass} ${
     center ? "text-center" : ""
   } ${paddingClass} ${className}`;
 

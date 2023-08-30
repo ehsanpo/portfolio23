@@ -1,6 +1,7 @@
 import Section from "@/components/Section";
+// @ts-ignore
 import SpotifyPlayer from "react-spotify-player";
-import InViewMonitor from "react-inview-monitor";
+import Heading from "@/components/Heading";
 
 const size = {
   width: "100%",
@@ -35,16 +36,12 @@ export default function Home() {
           </p>
         </div>
       </Section>
-      <Section className="no-bg">
-        <InViewMonitor
-          intoViewMargin="6%"
-          classNameNotInView="vis-hidden"
-          classNameInView="animated titleIn"
-          toggleClassNameOnInView
-        >
-          <h2 className="title red">Albums</h2>
-        </InViewMonitor>
-        <div className="grid grid-cols-2 divide-x">
+      <Section primary>
+        <Heading element="h2" size="m">
+          Albums
+        </Heading>
+
+        <div className="grid grid-cols-2 gap-4">
           <div>
             <h3>2020 - 2020</h3>
             <SpotifyPlayer
@@ -52,6 +49,7 @@ export default function Home() {
               size={size}
               view="coverart"
               theme="black"
+              className="rounded-md"
             />
           </div>
           <div>
@@ -61,11 +59,12 @@ export default function Home() {
               size={size}
               view="list"
               theme="black"
+              className="rounded-md"
             />
           </div>
         </div>
 
-        <div className="grid grid-cols-2 divide-x">
+        <div className="grid grid-cols-2 gap-4">
           <div>
             <h3>Present - 2020</h3>
             <SpotifyPlayer
@@ -85,7 +84,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-2 divide-x">
+        <div className="grid grid-cols-2 gap-4">
           <div>
             <h3>The Wind - 2019</h3>
             <SpotifyPlayer
@@ -107,15 +106,10 @@ export default function Home() {
         </div>
       </Section>
       <Section>
-        <InViewMonitor
-          intoViewMargin="6%"
-          classNameNotInView="vis-hidden"
-          classNameInView="animated titleIn"
-          toggleClassNameOnInView
-        >
-          <h2 className="title red">Singels & EP</h2>
-        </InViewMonitor>
-        <div className="grid grid-cols-2 divide-x">
+        <Heading element="h2" size="m">
+          Singels & EP
+        </Heading>
+        <div className="grid grid-cols-2 gap-4">
           <div>
             <h3>Noor - 2022</h3>
             <SpotifyPlayer
@@ -127,7 +121,7 @@ export default function Home() {
           </div>
           <div></div>
         </div>
-        <div className="grid grid-cols-2 divide-x">
+        <div className="grid grid-cols-2 gap-4">
           <div>
             <h3>Bellerina - 2022</h3>
             <SpotifyPlayer
@@ -138,7 +132,7 @@ export default function Home() {
             />
           </div>
           <div>
-            <h3>"20" - 2022</h3>
+            <h3>20 - 2022</h3>
             <SpotifyPlayer
               uri="spotify:album:4VzPczlIoeB84Nn1HsuFq6"
               size={sizeSingel}
@@ -147,7 +141,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-2 divide-x">
+        <div className="grid grid-cols-2 gap-4">
           <div>
             <h3>Divane - 2021</h3>
             <SpotifyPlayer
@@ -167,7 +161,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-2 divide-x">
+        <div className="grid grid-cols-2 gap-4">
           <div>
             <h3>Infinity - 2021</h3>
             <SpotifyPlayer
@@ -187,7 +181,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-2 divide-x">
+        <div className="grid grid-cols-2 gap-4">
           <div>
             <h3>Fallen Angels - 2019</h3>
             <SpotifyPlayer
@@ -207,7 +201,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-2 divide-x">
+        <div className="grid grid-cols-2 gap-4">
           <div>
             <h3>Hope - 2017</h3>
             <SpotifyPlayer

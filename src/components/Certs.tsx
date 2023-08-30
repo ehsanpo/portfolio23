@@ -2,6 +2,7 @@ import React from "react";
 import cert_data from "@/../data/cert-data";
 import Image from "next/image";
 import Grid from "./Grid";
+import Heading from "./Heading";
 
 interface Certification {
   img: string;
@@ -11,7 +12,9 @@ interface Certification {
 const Certs: React.FC = () => {
   return (
     <div className="container mx-auto">
-      <h2 className="title red">Certifications</h2>
+      <Heading size="xl" element="h2" padding="xl" center>
+        Certifications
+      </Heading>
       <Grid columns={4}>
         {cert_data.map((cert: Certification, index: number) => {
           return (
