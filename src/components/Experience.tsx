@@ -4,7 +4,7 @@ import Card from "@/components/Card";
 
 const Experience = () => (
   <div>
-    <h3 className="text-2xl">Experience</h3>
+    <h2 className="text-2xl">Experience</h2>
     <ul>
       {experienceData.map((item, index) => (
         <li key={index} className="my-2">
@@ -13,7 +13,7 @@ const Experience = () => (
             desc={
               <>
                 <p>{item.description}</p>
-                <div className="badge badge-outline">{item.date}</div>
+                <div className="badge badge-outline mt-1">{item.date}</div>
               </>
             }
           />

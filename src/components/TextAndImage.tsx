@@ -37,7 +37,7 @@ const Experience: FC<ExperienceProps> = ({
           )}
 
           {description && (
-            <p className="mb-4 mt-4 leading-relaxed">{description}</p>
+            <p className="text-xl mb-4 mt-4 leading-relaxed">{description}</p>
           )}
         </div>
 

@@ -5,6 +5,17 @@
 @import "tailwindcss/utilities";
 
 
+body{
+  font-family: var(--tomorrow-font);
+}
+
+h1,h2 {
+  font-family: var(--hexa-font);
+}
+
+h3, h4{
+  font-family: var(--rajdhani-font);
+}
 
 .instagram-gallery {
   display: flex;

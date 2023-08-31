@@ -3,6 +3,7 @@ import Card from "@/components/Card";
 import Button from "@/components/Button";
 import reactStringReplace from "react-string-replace";
 import Image from "next/image";
+import Link from "next/link";
 
 const Index = ({ data, onHome = false, excerpt = false }) => {
   return (
@@ -61,8 +62,8 @@ const Index = ({ data, onHome = false, excerpt = false }) => {
 
                 <div className="relative lg:-mx-4 lg:flex lg:justify-end">
                   <div className="pt-10 lg:w-2/3 lg:flex-none lg:px-4 lg:pt-0">
-                    <h2 className="font-display text-2xl font-semibold text-neutral-950">
-                      <a href={permalink}>{item.data.title}</a>
+                    <h2 className="text-2xl font-semibold text-neutral-950">
+                      <Link href={permalink}>{item.data.title}</Link>
                     </h2>
                     <dl className="lg:absolute lg:left-0 lg:top-0 lg:w-1/3 lg:px-4">
                       <dt className="sr-only">Published</dt>
@@ -72,13 +73,13 @@ const Index = ({ data, onHome = false, excerpt = false }) => {
                       <dt className="sr-only">Author</dt>
                       <dd className="mt-2 flex gap-x-2">
                         <div className="flex-none overflow-hidden rounded-xl bg-base-200">
-                          <img
-                            alt=""
+                          <Image
+                            alt="Ehsan Pourhadi"
                             loading="lazy"
-                            width="1800"
-                            height="1800"
-                            className="h-5 w-5 object-cover grayscale"
-                            src="https://studio.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fchelsea-hagon.073aa8f2.jpg&w=1920&q=75"
+                            width="48"
+                            height="48"
+                            className="h-5 w-5 object-cover"
+                            src="/img/ehsan1.jpg"
                           />
                         </div>
                         <div className="text-sm text-neutral-content">
@@ -92,13 +93,13 @@ const Index = ({ data, onHome = false, excerpt = false }) => {
                     <p className="mt-2 max-w-2xl text-base text-neutral-content ">
                       {cleanContent}
                     </p>
-                    <a
+                    <Link
                       className="btn mt-4"
                       aria-label={item.data.title}
                       href={permalink}
                     >
                       <span className="relative top-px">Read more</span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </article>

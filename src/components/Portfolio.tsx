@@ -22,7 +22,7 @@ const currentYear = new Date().getFullYear();
 
 const Portfolio: React.FC<PortfolioProps> = ({ data }) => {
   return (
-    <div className="mx-auto container lg:justify-center  lg:px-8 mt-16">
+    <div className="mx-auto container lg:justify-center lg:px-8 mb-5">
       <Heading size="xl" element="h2" padding="xl" center>
         Selected Work
       </Heading>

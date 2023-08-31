@@ -7,9 +7,9 @@ import fs from "fs";
 import matter from "gray-matter";
 import Section from "@/components/Section";
 
-const Portfolio = ({ data, content }) => (
+const Portfolio = ({ data }) => (
   <>
-    <SeO title="Developer Portfolio" />
+    <SeO title="Developer Blog" description="Web development journey" />
 
     <Section className="page-header lg:px-8 mt-24 sm:mt-32 lg:mt-4 ">
       <h1 className="text-1xl font-bold ">Blog</h1>

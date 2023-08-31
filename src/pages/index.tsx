@@ -9,17 +9,27 @@ import Stacks from "@/components/Stacks";
 import Testimonial from "@/components/Testimonial";
 import Awards from "@/components/Awards";
 import Clients from "@/components/Clients";
+import Section from "@/components/Section";
+import SeO from "@/components/Seo";
 
 export default function Home({ portfolioData, clients }: HomeProps) {
   return (
     <main>
+      <SeO
+        title="Ehsan Pourhadi - Digital Developer Portfolio"
+        description="Explore a diverse 10+ year journey spanning Software Development, UI/UX Design, Music Production, AI Operations, Tech Research, and more."
+      />
       <Hero
-        title="Digital Developer,Ui & UX Designer and Music Producer"
-        description="who provides digital solutions with more than ten years of experience creating and developing software for the web."
+        title="Navigating Bits and Beats"
+        description="A Multi-Dimensional Portfolio Journey in Software Development, UI/UX Design, Music Production, AI Operation, Tech Research, and More with more than ten years of experience creating and developing software for the web."
       />
 
-      <Portfolio data={portfolioData} />
-      <Stacks />
+      <Section>
+        <Portfolio data={portfolioData} />
+      </Section>
+      <Section primary>
+        <Stacks />
+      </Section>
       <Awards />
       <Testimonial />
       <Clients clients={clients} />

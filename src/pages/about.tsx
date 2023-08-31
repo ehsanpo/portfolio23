@@ -5,13 +5,20 @@ import Section from "@/components/Section";
 import TextAndImage from "@/components/TextAndImage";
 import InstagramGallery from "@/components/InstagramGallery";
 import Imagehover from "@/components/ImageHover";
+import SeO from "@/components/Seo";
+
 export default function About() {
   return (
     <>
+      <SeO
+        title="About Ehsan Pourhadi - Digital Developer Portfolio"
+        description="Explore a diverse 10+ year journey spanning Software Development, UI/UX Design, Music Production, AI Operations, Tech Research, and more."
+      />
+
       <TextAndImage
         headline="About Ehsan"
         imgComponent={<Imagehover />}
-        subHeadline="Welcome to my digital world! I'm Ehsan Pourhadi, a versatile Developer, Designer, and Producer with over ten years of experience crafting innovative solutions for the digital realm."
+        description="Welcome to my digital world! I'm Ehsan Pourhadi, a versatile Developer, Designer, and Producer with over ten years of experience crafting innovative solutions for the digital realm."
       />
       <Section primary>
         <div className="container px-5 py-6 mx-auto flex flex-wrap">
@@ -30,11 +37,13 @@ export default function About() {
                 stacks, anchored by a robust command of WordPress and Laravel
                 for backend excellence.
                 <br />
+                <br />
                 My proficiency extends seamlessly to front-end mastery with
                 Javascript and HTML/CSS. Beyond web development, I possess a
                 profound comprehension of user interface design, intricacies of
                 logo and identity creation, and the intricacies of search engine
                 optimization.
+                <br />
                 <br />
                 My extensive expertise also spans multimedia and mobile
                 development, as I consistently seek novel ideas and
@@ -116,31 +125,37 @@ export default function About() {
             <div className="leading-relaxed text-base">
               <ul>
                 <li>
-                  <p>Tackling complex problems.</p>
-                </li>
-                <li>
                   <p>
-                    Empowering colleagues to contribute meaningful insights.
+                    Tackling <strong>complex</strong> problems.
                   </p>
                 </li>
                 <li>
                   <p>
-                    Constructing cohesive and scalable software architectures.
+                    Empowering colleagues to contribute
+                    <strong> meaningful</strong> insights.
                   </p>
                 </li>
                 <li>
                   <p>
-                    Optimizing workflows. Sharing expertise. Cultivating
-                    connections.
+                    Constructing cohesive and{" "}
+                    <strong>scalable software </strong>
+                    architectures.
                   </p>
                 </li>
                 <li>
-                  <p>Establishing credibility and reliability.</p>
+                  <p>
+                    Optimizing workflows. <strong>Sharing expertise</strong>.
+                  </p>
                 </li>
                 <li>
                   <p>
-                    Code is not just functional; it molds digital environments,
-                    driving innovation.
+                    Establishing <strong>credibility</strong> and reliability.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Code is not just functional; it molds
+                    <strong>digital environments</strong>, driving innovation.
                   </p>
                 </li>
               </ul>

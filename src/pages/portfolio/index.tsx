@@ -9,7 +9,10 @@ import Section from "@/components/Section";
 const PortfolioPage = ({ portfolioBlockData }) => {
   return (
     <>
-      <SeO title="Developer Portfolio" />
+      <SeO
+        title="Developer Portfolio"
+        description="Portfolio showcasing top-notch projects reflecting my expertise as a developer."
+      />
 
       <Section className="page-header lg:px-8 mt-24 sm:mt-32 lg:mt-4 ">
         <h1 className="text-1xl font-bold ">Portfolio</h1>

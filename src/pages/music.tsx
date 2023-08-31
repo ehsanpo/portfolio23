@@ -2,6 +2,7 @@ import Section from "@/components/Section";
 // @ts-ignore
 import SpotifyPlayer from "react-spotify-player";
 import Heading from "@/components/Heading";
+import SeO from "@/components/Seo";
 
 const size = {
   width: "100%",
@@ -15,17 +16,21 @@ const sizeSingel = {
 export default function Home() {
   return (
     <>
+      <SeO
+        title="Music Portfolio"
+        description="Music is my lifelong passion, a tool for connection, healing, and self-expression. With years as a music producer, I craft heartfelt songs that resonate beyond charts, having collaborated with diverse artists and companies."
+      />
       <Section className="page-header lg:px-8 mt-24 sm:mt-32 lg:mt-4 ">
         <h1 className="text-1xl font-bold ">Music</h1>
         <h2 className="mt-3 text-4xl font-bold ">The latest work</h2>
 
         <div className="mt-3 max-w-3xl text-xl">
           <p>
-            Welcome to my music page! Music has always been a part of my life
-            and I am passionate about creating and sharing it with the world. To
-            me, music is more than just a form of entertainment - it has the
-            power to connect and heal us, to take us to another world and help
-            us be the best versions of ourselves.
+            Music has always been a part of my life and I am passionate about
+            creating and sharing it with the world. To me, music is more than
+            just a form of entertainment - it has the power to connect and heal
+            us, to take us to another world and help us be the best versions of
+            ourselves.
             <br />
             <br />
             As a professional music producer, I have had the opportunity to

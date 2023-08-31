@@ -52,7 +52,7 @@ const Card: React.FC<CardProps> = ({
           <header>
             <Heading
               className="card-title"
-              element="h2"
+              element="h3"
               size="m"
               padding="none"
             >
