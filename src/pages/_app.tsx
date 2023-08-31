@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import localFont from "next/font/local";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 
 import { Rajdhani, Tomorrow } from "next/font/google";
 
@@ -37,7 +38,8 @@ const hexa = localFont({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div>
+    <>
+      <Script src="https://scripts.withcabin.com/hello.js" />
       <Header />
       <Component {...pageProps} />
       <Footer />
@@ -48,6 +50,6 @@ export default function App({ Component, pageProps }: AppProps) {
           --tomorrow-font: ${tomorrow_font.style.fontFamily};
         }
       `}</style>
-    </div>
+    </>
   );
 }
