@@ -3,12 +3,25 @@ declare module "*.md" {
     export default value;
 }
 
+
 interface FrontMatter {
+    id: number;
+    title: string;
     permalink: string;
     onHome: boolean;
     fileName: string;
     client: string[];
     tag: string[];
+    port_date: string;
+    author: string;
+    agancy: string;
+    category: string[];
+    case_link_url?: string;
+    background_image: string[];
+    logo: string[];
+    bilder: string[];
+    onHome: boolean;
+    tagline: string;
     // Add other properties here
 }
 
@@ -26,6 +39,21 @@ interface HomeProps {
 interface PostData {
     title: string;
     fileName: string;
+    id: number;
+    permalink: string;
+    onHome: boolean;
+    client: string[];
+    tag: string[];
+    port_date: string;
+    author: string;
+    agancy: string;
+    category: string[];
+    case_link_url?: string;
+    background_image: string[];
+    logo: string[];
+    bilder: string[];
+    onHome: boolean;
+    tagline: string;
     // Add other properties here
 }
 
@@ -39,4 +67,23 @@ interface BlogTagProps {
     title: string;
     description: string;
     tag: string;
+
+}
+
+
+interface Item {
+    data: {
+        permalink: string;
+        id: string;
+        title: string;
+        date: string;
+        author: string;
+    };
+    content: string;
+}
+
+interface BlogProps {
+    data: Item[];
+    onHome?: boolean;
+    excerpt?: boolean;
 }

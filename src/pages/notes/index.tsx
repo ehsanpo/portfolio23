@@ -7,7 +7,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import Section from "@/components/Section";
 
-const Portfolio = ({ data }) => (
+const Portfolio = ({ data }: BlogProps) => (
   <>
     <SeO title="Developer Blog" description="Web development journey" />
 
@@ -42,6 +42,8 @@ export async function getStaticProps() {
     );
     const { data: frontmatter, content } = matter(readFile);
     frontmatter.fileName = fileName;
+
+    frontmatter.date = new Date(frontmatter.date);
     return {
       slug: "/notes/" + frontmatter.permalink,
       data: frontmatter,
@@ -49,7 +51,9 @@ export async function getStaticProps() {
     };
   });
   const sortedpost = posts.sort(
-    (a, b) => new Date(b.data.date) - new Date(a.data.date)
+    (a, b) =>
+      (new Date(b.data.date).getTime() as number) -
+      (new Date(a.data.date).getTime() as number)
   );
   return { props: { data: sortedpost } };
 }

@@ -1,10 +1,7 @@
 // @ts-ignore
 
 import React from "react";
-import Link from "next/link";
-
 import Grid from "@/components/Grid";
-import InViewMonitor from "react-inview-monitor";
 import Button from "@/components/Button";
 import Section from "./Section";
 import Card from "./Card";

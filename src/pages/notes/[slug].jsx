@@ -10,7 +10,6 @@ export async function getStaticPaths() {
       slug: fileName.replace(".md", ""),
     },
   }));
-  console.log("paths: ", paths);
 
   return {
     paths,
@@ -19,7 +18,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  console.log("slug: ", slug);
   const fileName = fs.readFileSync(`content/blog/${slug}/${slug}.md`, "utf-8");
   const files = fs.readdirSync("content/blog");
   // find the index of the current slug in files

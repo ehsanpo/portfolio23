@@ -1,16 +1,6 @@
 import React from "react";
-import Head from "next/head";
-import CodersrankSummary from "@codersrank/summary";
 
-function SEO({ description, lang, meta, title }) {
-  return (
-    <div className="mixed-chart">
-      {typeof window !== "undefined" && (
-        <CodersrankSummary username="ehsanpo" badges="3" show-avatar />
-      )}
-    </div>
-  );
-  return <CodersrankSummary username="ehsanpo" badges="3" show-avatar />;
+function Badges() {
   // https://codesandbox.io/s/coderranks-summary-forked-nrrywg?file=/src/index.ts
   return (
     <div className="codersrank-summary-badges">
@@ -52,4 +42,4 @@ function SEO({ description, lang, meta, title }) {
   );
 }
 
-export default SEO;
+export default Badges;

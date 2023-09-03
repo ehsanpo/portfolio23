@@ -5,7 +5,7 @@ import reactStringReplace from "react-string-replace";
 import Image from "next/image";
 import Link from "next/link";
 
-const Index = ({ data, onHome = false, excerpt = false }) => {
+const Index = ({ data, onHome = false, excerpt = false }: BlogProps) => {
   return (
     <div className="mx-auto container  mt-24 sm:mt-32 lg:mt-40">
       <div className="mx-auto  lg:max-w-none">

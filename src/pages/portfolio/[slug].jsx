@@ -10,7 +10,7 @@ export async function getStaticPaths() {
       slug: fileName.replace(".md", ""),
     },
   }));
-  console.log("paths: ", paths);
+
   return {
     paths,
     fallback: false,

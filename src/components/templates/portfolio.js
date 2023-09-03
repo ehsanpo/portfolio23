@@ -51,7 +51,6 @@ const IndexPage = ({ data, content }) => {
   }
 
   useEffect(() => {
-    console.log(video);
     if (portfolioBlockData.video) {
       setVideo(extractYouTubeVideoId(portfolioBlockData.video[0]));
     }

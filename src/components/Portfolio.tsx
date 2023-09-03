@@ -3,22 +3,11 @@ import Image from "next/image";
 import Card from "@/components/Card";
 import Heading from "./Heading";
 
-interface PortfolioProps {
-  data: {
-    slug: string;
-    data: {
-      port_date: string;
-      permalink: string;
-      title: string;
-      description: string;
-      fileName: string;
-      background_image: string[];
-      tag: string[];
-      new: boolean;
-    };
-  }[];
-}
 const currentYear = new Date().getFullYear();
+
+interface PortfolioProps {
+  data: PortfolioItem[];
+}
 
 const Portfolio: React.FC<PortfolioProps> = ({ data }) => {
   return (
@@ -28,11 +17,11 @@ const Portfolio: React.FC<PortfolioProps> = ({ data }) => {
       </Heading>
       <div className="mx-auto  lg:max-w-none">
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-          {data.map((item) => (
+          {data.map((item: PortfolioItem) => (
             <Card
               key={item.slug}
               title={item.data.title}
-              desc={item.data.description}
+              desc={item.data.tagline}
               img={{
                 src:
                   "/images/portfolio/" +

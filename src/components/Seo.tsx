@@ -1,7 +1,12 @@
 import React from "react";
 import Head from "next/head";
 
-function SEO({ description, title }) {
+interface SEOProps {
+  description?: string;
+  title: string;
+}
+
+const SEO: React.FC<SEOProps> = ({ description, title }) => {
   const metaDescription = description || "";
 
   return (
@@ -35,6 +40,6 @@ function SEO({ description, title }) {
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
   );
-}
+};
 
 export default SEO;

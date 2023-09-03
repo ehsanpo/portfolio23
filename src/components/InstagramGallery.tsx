@@ -18,7 +18,7 @@ export default function About() {
           Instagram Feed
         </Heading>
         <InstagramGallery
-          accessToken={process.env.NEXT_PUBLIC_INSTAGRAM_ACCESS_TOKEN}
+          accessToken={process.env.NEXT_PUBLIC_INSTAGRAM_ACCESS_TOKEN || ""}
           count={24}
         />
       </div>

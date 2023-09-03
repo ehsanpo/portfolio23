@@ -1,8 +1,5 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import fs from "fs";
 import matter from "gray-matter";
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Portfolio from "@/components/Portfolio";
 import Stacks from "@/components/Stacks";

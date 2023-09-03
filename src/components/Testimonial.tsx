@@ -102,7 +102,7 @@ const testimonial_data: TestimonialItem[] = [
         <br />
         Ehsan is a good influence and will contribute. Since he is helpful,
         curious and kind, he will make an extra effort to participate and
-        investigate an issue even if it isn't his primary responsibility.
+        investigate an issue even if it is not his primary responsibility.
         <br />
         <br />
         His cheerful attitude is very valuable since he will uplift others,

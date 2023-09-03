@@ -4,8 +4,14 @@ import stacks_data from "../../data/stacks-data";
 import Card from "./Card";
 import Heading from "./Heading";
 
-const Stack = () => {
-  const className = {
+interface StackDataItem {
+  slug: string;
+  labels: string[];
+  icon: string;
+}
+
+const Stack: React.FC = () => {
+  const className: Record<string, string> = {
     "bg-grad0": "hover:bg-grad0  hover:text-primary-content",
     "bg-grad1": "hover:bg-grad1  hover:text-primary-content",
     "bg-grad2": "hover:bg-grad2  hover:text-primary-content",
@@ -22,7 +28,7 @@ const Stack = () => {
         Stacks
       </Heading>
       <Grid columns={4}>
-        {stacks_data.map((item, index) => {
+        {stacks_data.map((item: StackDataItem, index: number) => {
           return (
             <Card
               className={` ${className["bg-grad" + index]}`}

@@ -10,7 +10,7 @@ const Post = ({ data, content }) => {
   const regex = /(!\[(.*?)\]\((.*?)\))/g;
   let cleanContent = reactStringReplace(content, regex, (match, i) => {
     if (match[0] == "!") return null;
-    console.log(imgLink);
+
     return (
       <Image
         src={"/images" + imgLink + match.replace(".", "")}

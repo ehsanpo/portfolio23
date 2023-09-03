@@ -1,10 +1,14 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Section from "@/components/Section";
-import Button from "@/components//Button";
-import styles from "./Clients.module.css"; // Import your CSS module
+import Button from "@/components/Button";
+import styles from "./Clients.module.css";
 import Heading from "../Heading";
 
-export default function Clients({ clients }: HomeProps) {
+interface ClientsProps {
+  clients: string[]; // Assuming clients is an array of strings
+}
+
+const Clients: React.FC<ClientsProps> = ({ clients }) => {
   const [showMore, setShowMore] = useState(false);
   const [clientsToShow, setClientsToShow] = useState(5);
 
@@ -48,4 +52,6 @@ export default function Clients({ clients }: HomeProps) {
       </div>
     </Section>
   );
-}
+};
+
+export default Clients;
