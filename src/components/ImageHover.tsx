@@ -20,12 +20,14 @@ const LocalImage = () => {
   return (
     <div
       id="imgContainer"
+      className="clipPath2"
       // @ts-ignore
       ref={container}
       style={{
         width: 512,
         height: 512,
         marginTop: 80,
+        maxWidth: "100%",
       }}
     />
   );

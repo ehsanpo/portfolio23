@@ -33,7 +33,7 @@ const Clients: React.FC<ClientsProps> = ({ clients }) => {
               return (
                 <div
                   key={client}
-                  className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 px-1 mb-1"
+                  className="clipPath2 w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 px-1 mb-1"
                 >
                   <div className="bg-base-200 py-4 text-center rounded-lg">
                     <span className="text-base-content">{client}</span>

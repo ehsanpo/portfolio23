@@ -12,18 +12,18 @@ interface StackDataItem {
 
 const Stack: React.FC = () => {
   const className: Record<string, string> = {
-    "bg-grad0": "hover:bg-grad0  hover:text-primary-content",
-    "bg-grad1": "hover:bg-grad1  hover:text-primary-content",
-    "bg-grad2": "hover:bg-grad2  hover:text-primary-content",
-    "bg-grad3": "hover:bg-grad3  hover:text-primary-content",
-    "bg-grad4": "hover:bg-grad4  hover:text-primary-content",
-    "bg-grad5": "hover:bg-grad5  hover:text-primary-content",
-    "bg-grad6": "hover:bg-grad6  hover:text-primary-content",
-    "bg-grad7": "hover:bg-grad7  hover:text-primary-content",
+    "bg-grad0": "hover:bg-grad0",
+    "bg-grad1": "hover:bg-grad1",
+    "bg-grad2": "hover:bg-grad2",
+    "bg-grad3": "hover:bg-grad3",
+    "bg-grad4": "hover:bg-grad4",
+    "bg-grad5": "hover:bg-grad5",
+    "bg-grad6": "hover:bg-grad6",
+    "bg-grad7": "hover:bg-grad7",
   };
 
   return (
-    <div className="container mx-auto ">
+    <div className="container mx-auto mb-3 ">
       <Heading size="xl" element="h2" padding="xl" center>
         Stacks
       </Heading>
@@ -31,11 +31,12 @@ const Stack: React.FC = () => {
         {stacks_data.map((item: StackDataItem, index: number) => {
           return (
             <Card
-              className={` ${className["bg-grad" + index]}`}
+              center
+              className={`text-primary-content ${className["bg-grad" + index]}`}
               key={item.slug}
               title={item.slug}
               desc={
-                <ul>
+                <ul className="card2 ">
                   {item.labels.map((t) => (
                     <li key={t}>{t}</li>
                   ))}

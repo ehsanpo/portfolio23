@@ -21,12 +21,11 @@ const Skills = () => {
       />
       <Section className="page-header lg:px-8 mt-24 sm:mt-32 lg:mt-4 ">
         <h1 className="text-1xl font-bold ">Skills</h1>
-        <h2 className="mt-3 text-4xl font-bold ">The latest work</h2>
+        <h2 className="mt-3 text-4xl font-bold ">Skills and Stats</h2>
 
         <div className="mt-3 max-w-3xl text-xl">
           <p>
-            Proficient in front-end, back-end, and system administration.
-            Crafting digital solutions with a user-centric approach.
+            I have a diverse 10+ year journey spanning Software Development,
           </p>
         </div>
       </Section>

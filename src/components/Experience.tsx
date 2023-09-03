@@ -1,10 +1,13 @@
 import React from "react";
 import experienceData from "../../data/experienceData";
 import Card from "@/components/Card";
+import Heading from "./Heading";
 
 const Experience = () => (
   <div>
-    <h2 className="text-2xl">Experience</h2>
+    <Heading element="h2" size="l" className="md:w-2/5">
+      Experience
+    </Heading>
     <ul>
       {experienceData.map((item, index) => (
         <li key={index} className="my-2">

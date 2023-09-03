@@ -3,7 +3,7 @@ import React, { ReactNode } from "react";
 interface HeaderProps {
   children: ReactNode;
   element: "h1" | "h2" | "h3" | "h4" | "h5";
-  size?: "s" | "m" | "l" | "xl"; // Use s/m/l/xl values for size
+  size?: "s" | "m" | "l" | "lg" | "xl"; // Use s/m/l/xl values for size
   center?: boolean;
   padding?: "none" | "s" | "m" | "l" | "xl";
   className?: string;
@@ -19,9 +19,10 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   const sizeMapping = {
     s: "text-base",
-    m: "text-xl",
-    l: "text-2xl",
-    xl: "text-4xl",
+    m: "text-m md:text-l lg:text-xl",
+    l: "text-l md:text-xl lg:text-2xl",
+    lg: "text-xl md:text-2xl lg:text-3xl",
+    xl: "text-2xl md:text-3xl lg:text-4xl",
   };
 
   const sizeClass = sizeMapping[size] || "text-base";
@@ -31,12 +32,12 @@ const Header: React.FC<HeaderProps> = ({
     s: "p-1",
     m: "p-2",
     l: "p-4",
-    xl: "p-6",
+    xl: "p-2 md:p-4 lg:p-6 ",
   };
 
   const paddingClass = paddingMapping[padding || "s"] || "";
 
-  const headingClasses = `mb-1 font-bold ${sizeClass} ${
+  const headingClasses = `font-bold ${sizeClass} ${
     center ? "text-center" : ""
   } ${paddingClass} ${className}`;
 

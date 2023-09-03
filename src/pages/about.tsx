@@ -6,8 +6,20 @@ import TextAndImage from "@/components/TextAndImage";
 import InstagramGallery from "@/components/InstagramGallery";
 import Imagehover from "@/components/ImageHover";
 import SeO from "@/components/Seo";
+import Heading from "@/components/Heading";
 
 export default function About() {
+  const classnames = [
+    "bg-grad0",
+    "bg-grad1",
+    "bg-grad2",
+    "bg-grad3",
+    "bg-grad4",
+    "bg-grad5",
+    "bg-grad6",
+    "bg-grad7",
+  ];
+
   return (
     <>
       <SeO
@@ -16,15 +28,18 @@ export default function About() {
       />
 
       <TextAndImage
+        className={`duration-500 transition-all bg-center bg-[length:100%] hover:bg-[length:500%] ${
+          classnames[Math.floor(Math.random() * classnames.length)]
+        } `}
         headline="About Ehsan"
         imgComponent={<Imagehover />}
         description="Welcome to my digital world! I'm Ehsan Pourhadi, a versatile Developer, Designer, and Producer with over ten years of experience crafting innovative solutions for the digital realm."
       />
       <Section primary>
-        <div className="container px-5 py-6 mx-auto flex flex-wrap">
-          <h2 className="sm:text-3xl text-2xl font-medium title-font md:w-2/5">
+        <div className="container px-2 md:px-5 md:py-6 mx-auto flex flex-wrap">
+          <Heading element="h2" size="xl" className="md:w-2/5">
             Background
-          </h2>
+          </Heading>
           <div className="md:w-3/5 md:pl-6">
             <div className="leading-relaxed text-base">
               <span className=" mt-4">
@@ -56,10 +71,10 @@ export default function About() {
       </Section>
 
       <Section>
-        <div className="container px-5 py-6 mx-auto flex flex-wrap">
-          <h2 className="sm:text-3xl text-2xl  font-medium title-font mb-2 md:w-2/5">
+        <div className="container px-2 md:px-5 md:py-6 mx-auto flex flex-wrap">
+          <Heading element="h2" size="xl" className="md:w-2/5">
             Philosophy
-          </h2>
+          </Heading>
           <div className="md:w-3/5 md:pl-6">
             <ul className="leading-relaxed text-base">
               <li>
@@ -117,10 +132,10 @@ export default function About() {
         </div>
       </Section>
       <Section secondary>
-        <div className="container px-5 py-6 mx-auto flex flex-wrap">
-          <h2 className="sm:text-3xl text-2xl font-medium title-font md:w-2/5">
+        <div className="container px-2 md:px-5 md:py-6 mx-auto flex flex-wrap">
+          <Heading element="h2" size="xl" className="md:w-2/5">
             Motivators
-          </h2>
+          </Heading>
           <div className="md:w-3/5 md:pl-6">
             <div className="leading-relaxed text-base">
               <ul>
@@ -164,11 +179,11 @@ export default function About() {
         </div>
       </Section>
       <Section>
-        <div className="mt-4 flex w-full flex-col gap-2 sm:flex-row">
+        <div className="lg:mt-4 flex w-full flex-col gap-2 sm:flex-row">
           <div className="md:w-3/6 mt-4  sm:mt-0 w-6/6">
             <Experience />
           </div>
-          <div className="w-3/6">
+          <div className="md:w-3/6 mt-4  sm:mt-0 w-6/6">
             <Education />
           </div>
         </div>

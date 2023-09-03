@@ -4,6 +4,7 @@ import Seo from "../Seo";
 import Image from "next/image";
 import reactStringReplace from "react-string-replace";
 import Section from "../Section";
+import Heading from "../Heading";
 
 const Post = ({ data, content }) => {
   const imgLink = data.post.permalink.replace("/notes/", "/images/");
@@ -32,18 +33,12 @@ const Post = ({ data, content }) => {
   return (
     <>
       <Seo title={data.post.title} />
-      <Section maxWidth="m" className="page-header ">
-        <div className="wrapper">
-          <h1 className="display">{data.post.title}</h1>
-        </div>
-      </Section>
 
-      <Section maxWidth="m">
-        <div className="wrapper">
-          <div className="wrapper-m">
-            <div className="blogContent">{cleanContent}</div>
-          </div>
-        </div>
+      <Section maxWidth="m" paddingTop="s">
+        <Heading element="h1" size="l">
+          {data.post.title}
+        </Heading>
+        <div className="blogContent">{cleanContent}</div>
       </Section>
     </>
   );

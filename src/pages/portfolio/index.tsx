@@ -6,7 +6,13 @@ import fs from "fs";
 import matter from "gray-matter";
 import Section from "@/components/Section";
 
-const PortfolioPage = ({ portfolioBlockData }) => {
+interface PortfolioPageProps {
+  portfolioBlockData: PortfolioItem[];
+}
+
+const PortfolioPage: React.FC<PortfolioPageProps> = ({
+  portfolioBlockData,
+}) => {
   return (
     <>
       <SeO
@@ -43,6 +49,7 @@ export async function getStaticProps() {
     );
     const { data: frontmatter } = matter(readFile);
     frontmatter.fileName = fileName;
+    frontmatter.date = new Date(frontmatter.date).toISOString();
     return {
       slug: frontmatter.permalink,
       data: frontmatter,
@@ -50,7 +57,10 @@ export async function getStaticProps() {
   });
 
   const sortedpost = posts.sort(
-    (a, b) => new Date(b.data.date) - new Date(a.data.date)
+    (a, b) =>
+      (new Date(b.data.date).getTime() as number) -
+      (new Date(a.data.date).getTime() as number)
   );
+
   return { props: { portfolioBlockData: sortedpost } };
 }

@@ -2,20 +2,20 @@ const experienceData = [
   {
     title: "Software Developer at Telavox",
     description:
-      "Collaborated on the development of various software projects using Angular, React, Java, and ElectronJs.",
+      "Collaborated on the development of various software projects using React, Java, and ElectronJs.",
     date: "2023",
   },
   {
     title: "Software Developer at Bredband2",
     description:
-      "Contributed to the implementation of web applications utilizing Gatsby, NextJs, and Ruby on Rails. Also managed projects and teams.",
+      "Contributed to the implementation of web applications utilizing Gatsby, NextJs, and Ruby on Rails. Also managed projects and team.",
     date: "2020 - 2023",
     link: "/portfolio/bredband2/",
   },
   {
     title: "Software Developer with Front-end Focus at Skymill",
     description:
-      "Led front-end development efforts by working with React and creating comprehensive end-to-end tests to ensure optimal user experiences.",
+      "Lead front-end development efforts by working with React and creating comprehensive end-to-end tests to ensure optimal user experiences.",
     date: "2020",
   },
   {

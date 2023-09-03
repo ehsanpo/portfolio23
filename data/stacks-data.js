@@ -19,7 +19,7 @@ const stacks_data = [
   },
   {
     slug: "Design",
-    labels: ["UI", "UX", "Adobe XD", "Adobe Photoshop", "Motion Graphics"],
+    labels: ["UI", "UX", "Adobe XD", "Photoshop", "Motion Graphics"],
     icon: "/img/stacks/design2.svg",
     data: ["10", "9", "8", "10", "8"],
   },

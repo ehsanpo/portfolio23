@@ -3,7 +3,6 @@ declare module "*.md" {
     export default value;
 }
 
-
 interface FrontMatter {
     id: number;
     title: string;
@@ -22,7 +21,6 @@ interface FrontMatter {
     bilder: string[];
     onHome: boolean;
     tagline: string;
-    // Add other properties here
 }
 
 interface PortfolioItem {
@@ -44,17 +42,9 @@ interface PostData {
     onHome: boolean;
     client: string[];
     tag: string[];
-    port_date: string;
     author: string;
-    agancy: string;
     category: string[];
-    case_link_url?: string;
-    background_image: string[];
-    logo: string[];
-    bilder: string[];
     onHome: boolean;
-    tagline: string;
-    // Add other properties here
 }
 
 interface TaggedPost {
@@ -69,7 +59,6 @@ interface BlogTagProps {
     tag: string;
 
 }
-
 
 interface Item {
     data: {

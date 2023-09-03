@@ -16,11 +16,12 @@ const Award = () => {
 
       <Grid columns={3}>
         <Card
+          center
           sec
           title="Svenska design"
           desc="Gold Category Digital Design "
           img={{
-            src: "/static/svenskadesign-b.png",
+            src: "/static/svenskadesign.png",
             alt: "Svenska design",
             width: 80,
             height: 80,
@@ -28,12 +29,13 @@ const Award = () => {
         />
 
         <Card
+          center
           sec
           title="Cannes lions"
           desc=" Silver Lion in Promo & Activation, Bronze Lion in Cyber &
             Shortlist in Media"
           img={{
-            src: "/static/cannen-b.png",
+            src: "/static/cannen.png",
             alt: "Cannes lions",
             width: 80,
             height: 80,
@@ -41,11 +43,12 @@ const Award = () => {
         />
 
         <Card
+          center
           sec
           title="Guldägget"
           desc=" Gold Category PR & Silver Categories Digital and Alternative Media"
           img={{
-            src: "/static/guldagg-b.png",
+            src: "/static/guldagg.png",
             alt: "Guldägget",
             width: 80,
             height: 80,

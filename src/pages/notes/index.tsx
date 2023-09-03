@@ -43,13 +43,15 @@ export async function getStaticProps() {
     const { data: frontmatter, content } = matter(readFile);
     frontmatter.fileName = fileName;
 
-    frontmatter.date = new Date(frontmatter.date);
+    frontmatter.date = new Date(frontmatter.date).toISOString();
+
     return {
       slug: "/notes/" + frontmatter.permalink,
       data: frontmatter,
       content,
     };
   });
+  console.log(posts);
   const sortedpost = posts.sort(
     (a, b) =>
       (new Date(b.data.date).getTime() as number) -

@@ -11,21 +11,36 @@ interface Certification {
 
 const Certs: React.FC = () => {
   return (
-    <div className="container mx-auto">
-      <Heading size="xl" element="h2" padding="xl" center>
+    <div className="container mx-auto mb-4">
+      <Heading
+        size="xl"
+        element="h2"
+        padding="xl"
+        center
+        className="text-primary"
+      >
         Certifications
       </Heading>
       <Grid columns={4}>
         {cert_data.map((cert: Certification, index: number) => {
           return (
-            <div key={index}>
+            <div key={index} className="text-center">
               <Image
                 src={`/images/cert/${cert.img}`}
                 alt={cert.name}
                 width={320}
                 height={320}
               />
-              <h4>{cert.name}</h4>
+              <h4></h4>
+              <Heading
+                size="m"
+                element="h3"
+                padding="none"
+                center
+                className="text-accent"
+              >
+                {cert.name}
+              </Heading>
             </div>
           );
         })}

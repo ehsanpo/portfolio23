@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "./Button";
 import Image from "next/image";
 import Heading from "./Heading";
+import Grid from "./Grid";
 interface TestimonialItem {
   id: number;
   name: string;
@@ -213,9 +214,11 @@ const testimonial_data: TestimonialItem[] = [
 
 const TestimonialSingle: React.FC<{ item: TestimonialItem }> = ({ item }) => {
   const [readMore, setReadMore] = useState(false);
-
   return (
-    <blockquote className=" w-full mx-auto rounded-lg hover:border-accent bg-base-200 transition text-base-content border border-base-300 p-3 font-light mb-2">
+    <blockquote
+      className={`shadow-lg hover:shadow-2xl w-full mx-auto rounded-lg hover:border-accent bg-base-200 transition text-base-content border border-base-300 p-3 font-light mb-2
+    ${readMore ? " col-span-3 " : ""} `}
+    >
       <div className="w-full flex mb-4 items-center">
         <div className="overflow-hidden rounded-full w-6 h-6 bg-base-200 border border-accent">
           <Image src={item.img} alt="" width={200} height={200} />
@@ -239,13 +242,10 @@ const TestimonialSingle: React.FC<{ item: TestimonialItem }> = ({ item }) => {
   );
 };
 
-const Testimonial: React.FC = () => {
-  const rows = 3;
-  const cols = 2;
-
+const Testimonial = () => {
   return (
-    <div className="min-w-screen min-h-screen flex items-center justify-center py-5">
-      <div className="w-full px-5 py-16 md:py-24">
+    <div className="in-w-screen min-h-screen flex items-center justify-center py-5">
+      <div className="w-full px-2 py-16 md:py-24">
         <div className="w-full max-w-6xl mx-auto">
           <div className="text-center max-w-xl mx-auto">
             <Heading size="xl" element="h2" padding="xl" center>
@@ -261,10 +261,12 @@ const Testimonial: React.FC = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-4">
-            {testimonial_data.slice(0, 6).map((item) => (
-              <TestimonialSingle item={item} key={item.id} />
-            ))}
+          <div className="">
+            <Grid columns={3}>
+              {testimonial_data.slice(0, 6).map((item) => (
+                <TestimonialSingle item={item} key={item.id} />
+              ))}
+            </Grid>
           </div>
         </div>
       </div>

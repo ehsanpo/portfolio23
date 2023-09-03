@@ -6,6 +6,8 @@ import Image from "next/image";
 import Section from "@/components/Section";
 import NextImage from "next/image";
 import Card from "@/components/Card";
+import Heading from "@/components/Heading";
+import Seo from "@/components/Seo";
 
 const NextArticle = ({ data }) => {
   if (Object.keys(data.nextPost).length === 0) {
@@ -67,6 +69,7 @@ const IndexPage = ({ data, content }) => {
 
   return (
     <>
+      <Seo title={portfolioBlockData.title} />
       <article className="portfolio-page page">
         <div
           className="hero h-[calc(50vh)] place-items-end z-40 relative"
@@ -84,16 +87,16 @@ const IndexPage = ({ data, content }) => {
             }`}
           >
             <div className="max-w-md mx-4">
-              <h1 className="mb-5 text-4xl font-bold">
+              <Heading padding="none" className="mb-2 lg:mb-4" size="xl">
                 {portfolioBlockData.title}
-              </h1>
+              </Heading>
 
               <button className="btn btn-primary">Visit Site</button>
             </div>
           </div>
           {video && (
             <div
-              className={`video-wrapper ${
+              className={`mr-4 video-wrapper ${
                 isPlaying ? "video-wrapper--fullscreen" : ""
               }`}
             >
@@ -113,10 +116,10 @@ const IndexPage = ({ data, content }) => {
           )}
         </div>
         <Section>
-          <div className="flex items-start ">
-            <aside className="sticky w-1/3 flex-none top-0 pr-3">
+          <div className="flex items-start flex-wrap">
+            <aside className="md:sticky md:w-1/3 w-full flex-none top-0 md:pr-3">
               <div>
-                <Card title="01 - Info" className="mb-2">
+                <Card as="div" title="01 - Info" className="mb-2">
                   <h4>
                     <span>Date: </span>
 
@@ -135,7 +138,7 @@ const IndexPage = ({ data, content }) => {
                     </h4>
                   )}
                 </Card>
-                <Card title="02 - Roles" className="mb-2">
+                <Card as="div" title="02 - Roles" className="mb-2">
                   <div>
                     {portfolioBlockData.category.map((cat) => (
                       <span className="badge badge-primary mr-1" key={cat}>
@@ -144,8 +147,8 @@ const IndexPage = ({ data, content }) => {
                     ))}
                   </div>
                 </Card>
-                <Card title="03 - Tech" className="mb-2 ">
-                  <div className="">
+                <Card as="div" title="03 - Tech" className="mb-2 ">
+                  <div>
                     {portfolioBlockData.tag.map((tag, index) => (
                       <Link
                         className="badge badge-secondary mr-1"
@@ -157,9 +160,18 @@ const IndexPage = ({ data, content }) => {
                     ))}
                   </div>
                 </Card>
+                <Card as="div" title="03 - Logo" className="mb-2">
+                  <Image
+                    src={permalink + portfolioBlockData.logo[0]}
+                    width={400}
+                    height={300}
+                    alt="logo"
+                    className="mx-auto"
+                  />
+                </Card>
               </div>
             </aside>
-            <div className=" gallery-wrapper flex-1">
+            <div className=" gallery-wrapper md:flex-1">
               {portfolioBlockBody && (
                 <Card title="04 - About" className="mb-2 ">
                   <div

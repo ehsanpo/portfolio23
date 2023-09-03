@@ -9,7 +9,7 @@ const Index = ({ data, onHome = false, excerpt = false }: BlogProps) => {
   return (
     <div className="mx-auto container  mt-24 sm:mt-32 lg:mt-40">
       <div className="mx-auto  lg:max-w-none">
-        <div className="space-y-24 lg:space-y-32">
+        <div className="mb-4">
           {data.map((item) => {
             const imgLink = item.data.permalink.replace("/notes/", "/images/");
             const permalink = "/notes" + item.data.permalink;
@@ -41,8 +41,7 @@ const Index = ({ data, onHome = false, excerpt = false }: BlogProps) => {
             return (
               <article
                 key={item.data.id}
-                className="mt-4 pt-4 relative 
-                
+                className="mt-4 pt-4 relative lg:mx-0 mx-2
                "
               >
                 <span
@@ -67,7 +66,7 @@ const Index = ({ data, onHome = false, excerpt = false }: BlogProps) => {
                     </h2>
                     <dl className="lg:absolute lg:left-0 lg:top-0 lg:w-1/3 lg:px-4">
                       <dt className="sr-only">Published</dt>
-                      <dd className="absolute left-0 top-0 text-sm text-neutral-950 lg:static">
+                      <dd className=" left-0 top-0 text-sm text-neutral-950 lg:static">
                         <time dateTime={item.data.date}> {item.data.date}</time>
                       </dd>
                       <dt className="sr-only">Author</dt>
@@ -82,7 +81,7 @@ const Index = ({ data, onHome = false, excerpt = false }: BlogProps) => {
                             src="/img/ehsan1.jpg"
                           />
                         </div>
-                        <div className="text-sm text-neutral-content">
+                        <div className="text-sm text-base-content">
                           <div className="font-semibold">
                             {item.data.author}
                           </div>
@@ -90,7 +89,7 @@ const Index = ({ data, onHome = false, excerpt = false }: BlogProps) => {
                         </div>
                       </dd>
                     </dl>
-                    <p className="mt-2 max-w-2xl text-base text-neutral-content ">
+                    <p className="mt-2 max-w-2xl text-base-content ">
                       {cleanContent}
                     </p>
                     <Link

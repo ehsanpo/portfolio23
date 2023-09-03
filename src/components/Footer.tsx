@@ -32,7 +32,7 @@ const Footer = () => (
       </div>
       <div className="bg-grad2 px-3 w-6/12 py-6">
         <div className="move-top"></div>
-        <div className="social flex">
+        <div className="social flex flex-col md:flex-row gap-1">
           <a
             className="ml-2"
             href="https://www.instagram.com/ehsaanpo/"

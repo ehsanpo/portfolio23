@@ -87,10 +87,9 @@ const data = [
 
 export default function stats() {
   return (
-    <div className="stats shadow">
+    <div className="grid  md:grid-cols-4 mb-3">
       {data.map((stat, index) => (
-        <div className="stat" key={index}>
-          <div className="stat-figure text-primary">{stat.icon}</div>
+        <div className="grid " key={index}>
           <div className="stat-title">{stat.title}</div>
           <div className="stat-value text-primary">{stat.desciption}</div>
         </div>

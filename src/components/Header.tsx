@@ -20,30 +20,14 @@ const menu: MenuItem = {
 const themes = [
   "light",
   "dark",
-  "cupcake",
-  "bumblebee",
-  "emerald",
-  "corporate",
   "synthwave",
-  "retro",
-  "cyberpunk",
   "valentine",
   "halloween",
   "garden",
   "forest",
-  "aqua",
   "lofi",
-  "pastel",
-  "fantasy",
-  "wireframe",
-  "black",
   "luxury",
   "dracula",
-  "cmyk",
-  "autumn",
-  "business",
-  "acid",
-  "lemonade",
   "night",
   "coffee",
   "winter",
@@ -87,9 +71,6 @@ const Header: React.FC = () => {
             ))}
           </ul>
         </div>
-        <Link className="btn btn-ghost normal-case text-xl" href="/">
-          Ehsan Pourhadi
-        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

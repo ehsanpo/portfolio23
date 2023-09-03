@@ -1,9 +1,13 @@
 import React from "react";
 import educationData from "../../data/educationData.js";
 import Card from "@/components/Card";
+import Heading from "./Heading";
+
 const Education = () => (
   <div>
-    <h2 className="text-2xl">Education</h2>
+    <Heading element="h2" size="l" className="md:w-2/5">
+      Education
+    </Heading>
     <ul>
       {educationData.map((item, index) => (
         <li key={index} className="my-2">
