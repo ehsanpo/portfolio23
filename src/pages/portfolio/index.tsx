@@ -40,11 +40,11 @@ const PortfolioPage: React.FC<PortfolioPageProps> = ({
 export default PortfolioPage;
 
 export async function getStaticProps() {
-  const files = fs.readdirSync("Content/Portfolio");
+  const files = fs.readdirSync("content/Portfolio");
   const posts = files.map((fileName) => {
     const slug = fileName.replace(".md", "");
     const readFile = fs.readFileSync(
-      `Content/Portfolio/${fileName}/${fileName}.md`,
+      `content/Portfolio/${fileName}/${fileName}.md`,
       "utf-8"
     );
     const { data: frontmatter } = matter(readFile);
