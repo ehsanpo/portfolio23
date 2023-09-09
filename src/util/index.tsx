@@ -10,7 +10,7 @@ async function collateTags(dataType: string): Promise<string[]> {
       `Content/portfolio/${postSlug}/${postSlug}.md`,
       "utf8"
     );
-    const { data } = matter(source) as { data: { tag: string[] } };
+    const { data } = matter(source) as unknown as { data: PostData };
     data.fileName = postSlug;
     data.tag.forEach((tag) => allTags.add(tag));
   });
@@ -19,9 +19,10 @@ async function collateTags(dataType: string): Promise<string[]> {
 }
 
 export async function getTags(dataType: string): Promise<string[]> {
-  const tags = {
+  const tags: Record<string, string[]> = {
     blog: await collateTags(dataType),
   };
+
   return tags[dataType];
 }
 
@@ -36,8 +37,9 @@ export async function getAllPostsWithFrontMatter(
       `Content/portfolio/${postSlug}/${postSlug}.md`,
       "utf8"
     );
+    const matterResult = matter(source);
+    const { data } = matterResult as unknown as { data: PostData };
 
-    const { data } = matter(source) as { data: PostData & { tag: string[] } };
     data.fileName = postSlug;
 
     if (filterByTag) {
