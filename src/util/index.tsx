@@ -2,12 +2,12 @@ import fs from "fs";
 import matter from "gray-matter";
 
 async function collateTags(dataType: string): Promise<string[]> {
-  const files = fs.readdirSync("Content/Portfolio");
+  const files = fs.readdirSync("content/Portfolio");
   const allTags = new Set<string>();
 
   files.map((postSlug) => {
     const source = fs.readFileSync(
-      `Content/portfolio/${postSlug}/${postSlug}.md`,
+      `content/Portfolio/${postSlug}/${postSlug}.md`,
       "utf8"
     );
     const { data } = matter(source) as unknown as { data: PostData };
@@ -30,11 +30,11 @@ export async function getAllPostsWithFrontMatter(
   dataType: string,
   filterByTag: string | null = null
 ): Promise<TaggedPost[]> {
-  const files = fs.readdirSync("Content/Portfolio");
+  const files = fs.readdirSync("content/Portfolio");
 
   return files.reduce<TaggedPost[]>((allPosts, postSlug) => {
     const source = fs.readFileSync(
-      `Content/portfolio/${postSlug}/${postSlug}.md`,
+      `content/Portfolio/${postSlug}/${postSlug}.md`,
       "utf8"
     );
     const matterResult = matter(source);

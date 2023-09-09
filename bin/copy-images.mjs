@@ -4,8 +4,8 @@ import fsExtra from "fs-extra";
 
 const fsPromises = fs.promises;
 const targetDir = "./public/images";
-const postsDirx = "./Content/portfolio";
-const BlogDir = "./Content/blog";
+const postsDirx = "./content/portfolio";
+const BlogDir = "./content/blog";
 
 async function copyImagesToPublic(images, slug, postsDir) {
   for (const image of images) {
@@ -53,6 +53,6 @@ async function createPostImageFoldersForCopy(postsDir) {
 }
 
 await fsExtra.emptyDir(targetDir);
-await createPostImageFoldersForCopy("./content/portfolio");
-await createPostImageFoldersForCopy("./content/blog");
+await createPostImageFoldersForCopy("./content/Portfolio");
+await createPostImageFoldersForCopy("./content/Blog");
 console.log("Done coping images");

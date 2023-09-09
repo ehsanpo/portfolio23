@@ -33,11 +33,11 @@ const Portfolio = ({ data }: BlogProps) => (
 export default Portfolio;
 
 export async function getStaticProps() {
-  const files = fs.readdirSync("Content/blog");
+  const files = fs.readdirSync("content/Blog");
   const posts = files.map((fileName) => {
     const slug = fileName.replace(".md", "");
     const readFile = fs.readFileSync(
-      `Content/blog/${fileName}/${fileName}.md`,
+      `content/Blog/${fileName}/${fileName}.md`,
       "utf-8"
     );
     const { data: frontmatter, content } = matter(readFile);
