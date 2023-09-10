@@ -16,6 +16,7 @@ interface CardProps {
   className?: string;
   center?: boolean;
   as?: keyof JSX.IntrinsicElements | React.ComponentType<any>;
+  glow?: boolean;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -28,65 +29,76 @@ const Card: React.FC<CardProps> = ({
   aspectRatio,
   children,
   sec,
-  className,
+  className = "",
   center,
   as = "article",
+  glow = false,
 }) => {
   const cardContent = React.createElement(
     as,
     {
-      className: `${className} ${
-        sec ? "bg-primary text-primary-content" : ""
-      }  ${
+      className: `article-card relative ${
         center ? "text-center" : ""
-      } card h-full w-96 bg-base-300 shadow-xl border transition  border-base-300 hover:border-accent `,
+      } h-full w-96 rounded-2xl`,
     },
     <>
-      {img && (
-        <figure>
-          <Image
-            style={{ aspectRatio: aspectRatio ? "16/9" : "unset" }}
-            className={!aspectRatio ? "mt-4 " : "w-full"}
-            src={img.src}
-            alt={img.alt}
-            width={img.width ? img.width : 400}
-            height={img.height ? img.height : 200}
-          />
-        </figure>
+      {glow && (
+        <div className={`card-glow  ${sec ? "bg-primary" : " bg-accent"} `} />
       )}
 
-      <div className="card-body">
-        {title && (
-          <header>
-            <Heading
-              className={` ${center ? "text-center" : ""}`}
-              element="h3"
-              size="m"
-              padding="none"
-            >
-              {title}
-              {isNew && (
-                <div className="badge badge-secondary ml-1 align-text-top ">
-                  NEW
-                </div>
-              )}
-            </Heading>
-          </header>
+      <div
+        className={`card ${className} ${
+          sec
+            ? "bg-primary text-primary-content hover:border-secondary"
+            : " hover:border-accent"
+        } border border-base-300  bg-base-300 h-full shadow-xl  transition`}
+      >
+        {img && (
+          <figure>
+            <Image
+              style={{ aspectRatio: aspectRatio ? "16/9" : "unset" }}
+              className={!aspectRatio ? "mt-4 " : "w-full"}
+              src={img.src}
+              alt={img.alt}
+              width={img.width ? img.width : 400}
+              height={img.height ? img.height : 200}
+            />
+          </figure>
         )}
-        {children}
-        {desc && <div>{desc}</div>}
-        {tags && (
-          <div className="card-actions justify-end mt-1">
-            {tags.slice(0, 3).map((tag) => (
-              <div
-                key={tag}
-                className="badge badge-outline  hover:text-primary-content"
+
+        <div className="card-body">
+          {title && (
+            <header>
+              <Heading
+                className={` ${center ? "text-center" : ""}`}
+                element="h3"
+                size="m"
+                padding="none"
               >
-                {tag}
-              </div>
-            ))}
-          </div>
-        )}
+                {title}
+                {isNew && (
+                  <div className="badge badge-secondary ml-1 align-text-top ">
+                    NEW
+                  </div>
+                )}
+              </Heading>
+            </header>
+          )}
+          {children}
+          {desc && <div>{desc}</div>}
+          {tags && (
+            <div className="card-actions justify-end mt-1">
+              {tags.slice(0, 3).map((tag) => (
+                <div
+                  key={tag}
+                  className="badge badge-outline  hover:text-primary-content"
+                >
+                  {tag}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </>
   );
