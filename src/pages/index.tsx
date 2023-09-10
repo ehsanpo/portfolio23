@@ -35,7 +35,7 @@ export default function Home({ portfolioData, clients }: HomeProps) {
 }
 
 export async function getStaticProps(): Promise<{ props: HomeProps }> {
-  const files = fs.readdirSync("Content/Portfolio");
+  const files = fs.readdirSync("content/Portfolio");
   const posts: PortfolioItem[] = files.map((fileName) => {
     const slug = fileName.replace(".md", "");
     const readFile = fs.readFileSync(
