@@ -17,7 +17,7 @@ const testimonial_data: TestimonialItem[] = [
     id: 1,
     name: "Asger Bjerre-Nielsen",
     title: "Developer At Bredeband2",
-    img: "/images/testimonial/asger.jpeg",
+    img: "/img/testimonial/asger.jpg",
     short:
       "Ehsan and I have worked closely together on a variety of projects, each differing in size and complexity. Besides his excellent ability to break down tasks and problems and provide high quality code to efficiently solve even the most demanding task we have had.",
     desc: (
@@ -55,7 +55,7 @@ const testimonial_data: TestimonialItem[] = [
     id: 2,
     name: "Rebecca Löfgren",
     title: "Senior UX Designer at Bredband2",
-    img: "/images/testimonial/rebecca.jpg",
+    img: "/img/testimonial/rebecca.jpg",
     short:
       "Ehsan possesses the ability to see the whole picture, which enables him to produce quality products – even if the brief is a bit fuzzy.",
     desc: (
@@ -91,7 +91,7 @@ const testimonial_data: TestimonialItem[] = [
     id: 3,
     name: "Timothy Alexis Vass",
     title: "System Developer at Bredband2",
-    img: "/images/testimonial/timmy.jpg",
+    img: "/img/testimonial/timmy.jpg",
     short:
       "Ehsan is a good influence and will contribute. Since he is helpful, curious and kind, he will make an extra effort to participate and investigate an issue even if it isn't his primary responsibility.",
     desc: (
@@ -118,7 +118,7 @@ const testimonial_data: TestimonialItem[] = [
     id: 4,
     name: "Fredrik Månsson",
     title: "System Developer at Bredband2",
-    img: "/images/testimonial/fredrik.jpg",
+    img: "/img/testimonial/fredrik.jpg",
     short:
       "He has a strong ability to quickly grasp the problems that need to be solved and utilize existing knowledge or gather new information to solve them. We've had many great moments discussing programming and problem-solving, most recently in a project involving React and NextJS.",
     desc: (
@@ -150,7 +150,7 @@ const testimonial_data: TestimonialItem[] = [
     id: 5,
     name: "Erfan Shirazi",
     title: "CIO at Bredband2",
-    img: "/images/testimonial/erfan.jpg",
+    img: "/img/testimonial/erfan.jpg",
     short:
       "He is incredibly competent, knowledgeable, and learns quickly. He is highly regarded by his colleagues and contributes a lot when it comes to various issues related to web development and software engineering in general.",
     desc: (
@@ -175,7 +175,7 @@ const testimonial_data: TestimonialItem[] = [
     id: 6,
     name: "David Szmak",
     title: "Front End Developer at Guts & Glory",
-    img: "/images/testimonial/david.jpg",
+    img: "/img/testimonial/david.jpg",
     short:
       "Few people have the opportunity to code to a Tech Lead Developer who is also a good coach and a great mentor—but I did when I worked with Ehsan.",
     desc: (
@@ -205,7 +205,7 @@ const testimonial_data: TestimonialItem[] = [
     id: 6,
     name: "Klas Oskarsson",
     title: "Account Director",
-    img: "/images/testimonial/klas.jpg",
+    img: "/img/testimonial/klas.jpg",
     short:
       "As the project manager for the award-winning project TOOLPOOL, I have Ehsan to thank for its significant success.",
     desc: `Som projektledare för det Guldäggsbelönade projektet TOOLPOOL har jag Ehsan att tacka för att detta blev så pass framgångsrikt. Hela projektet baserades på en (vid det tillfället) ej tillgänglig funktion på Facebook. Ehsan lyckades inte bara skapa denna funktion och därmed säkra hela leveransen, utan var även högst delaktig i att utforma hela den tekniska aspekten av projektet. Hårt slit under stor tidspress och obefintlig budget var inget hinder för Ehsan. Tack!`,

@@ -25,7 +25,8 @@ const Skills = () => {
 
         <div className="mt-3 max-w-3xl text-xl">
           <p>
-            I have a diverse 10+ year journey spanning Software Development,
+            Proficient in front-end, back-end, and system administration.
+            Crafting digital solutions with a user-centric approach.
           </p>
         </div>
       </Section>

@@ -51,7 +51,6 @@ export async function getStaticProps() {
       content,
     };
   });
-  console.log(posts);
   const sortedpost = posts.sort(
     (a, b) =>
       (new Date(b.data.date).getTime() as number) -

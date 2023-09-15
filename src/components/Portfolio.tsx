@@ -24,7 +24,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ data }) => {
               desc={item.data.tagline}
               img={{
                 src:
-                  "/images/portfolio/" +
+                  "/images/" +
                   item.data.fileName +
                   "/" +
                   item.data.background_image[0],

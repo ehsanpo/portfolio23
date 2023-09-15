@@ -63,6 +63,28 @@ section {
   );
 }
 
+.card-glow {
+  position: absolute;
+  width: 50%;
+  margin: 0 auto;
+  height: 9px;
+  right: 0;
+  left: 0;
+  filter: blur(5px);
+  transition: all 350ms ease-in-out;
+  top: 8px;
+}
+
+article:hover  .card-glow{
+  filter: blur(8px);
+  top:5px;
+}
+
+.article-card{
+padding: 1px;
+}
+
+
 .instagram-gallery {
   display: flex;
   flex-wrap: wrap;

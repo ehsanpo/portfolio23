@@ -26,7 +26,7 @@ const Certs: React.FC = () => {
           return (
             <div key={index} className="text-center">
               <Image
-                src={`/images/cert/${cert.img}`}
+                src={`/img/cert/${cert.img}`}
                 alt={cert.name}
                 width={320}
                 height={320}

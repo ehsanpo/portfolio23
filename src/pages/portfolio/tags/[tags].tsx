@@ -15,6 +15,7 @@ export default function BlogTag({
         </h3>
       </div>
       <div className="wrapper">
+        {/*  @ts-ignore */}
         <Portfolio data={posts} />
       </div>
     </section>
