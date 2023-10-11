@@ -2,6 +2,8 @@ import React from "react";
 import educationData from "../../data/educationData.js";
 import Card from "@/components/Card";
 import Heading from "./Heading";
+import { Fade } from "react-awesome-reveal";
+import  {calculateAnimationDelayValue} from "@/util/index";
 
 const Education = () => (
   <div>
@@ -10,6 +12,7 @@ const Education = () => (
     </Heading>
     <ul>
       {educationData.map((item, index) => (
+        <Fade delay={calculateAnimationDelayValue(index) } key={index} >
         <li key={index} className="my-2">
           <Card
             title={item.title}
@@ -21,6 +24,7 @@ const Education = () => (
             }
           />
         </li>
+        </Fade>
       ))}
     </ul>
   </div>

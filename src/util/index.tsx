@@ -26,6 +26,13 @@ export async function getTags(dataType: string): Promise<string[]> {
   return tags[dataType];
 }
 
+export const calculateAnimationDelayValue = (index: number): number => {
+  const minValue = 50;
+  const maxValue = 150;
+  const calculatedValue = 200 * (index / 3);
+  return Math.max(minValue, Math.min(calculatedValue, maxValue));
+};
+
 export async function getAllPostsWithFrontMatter(
   dataType: string,
   filterByTag: string | null = null

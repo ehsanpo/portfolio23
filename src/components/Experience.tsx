@@ -2,6 +2,8 @@ import React from "react";
 import experienceData from "../../data/experienceData";
 import Card from "@/components/Card";
 import Heading from "./Heading";
+import { Fade } from "react-awesome-reveal";
+import  {calculateAnimationDelayValue} from "@/util/index";
 
 const Experience = () => (
   <div>
@@ -10,7 +12,8 @@ const Experience = () => (
     </Heading>
     <ul>
       {experienceData.map((item, index) => (
-        <li key={index} className="my-2">
+        <Fade delay={calculateAnimationDelayValue(index) } key={index}>
+        <li className="my-2">
           <Card
             title={item.title}
             desc={
@@ -21,6 +24,7 @@ const Experience = () => (
             }
           />
         </li>
+        </Fade>
       ))}
     </ul>
   </div>

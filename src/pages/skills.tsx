@@ -64,7 +64,7 @@ const Skills = () => {
       />
       <TextAndImage
         img={{ src: "/img/0_4.png", alt: "Continuous Development" }}
-        className="bg-accent text-accent-content"
+        className="bg-none text-accent-content"
         headline="Continuous Development"
         description="I possess the skill to seamlessly integrate diverse changes, encompassing features, configurations, bug fixes, and experiments, into production or user access, ensuring both safety and efficiency within a sustainable framework."
       />
