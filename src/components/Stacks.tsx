@@ -3,6 +3,8 @@ import Grid from "@/components/Grid";
 import stacks_data from "../../data/stacks-data";
 import Card from "./Card";
 import Heading from "./Heading";
+import { Fade } from "react-awesome-reveal";
+import  {calculateAnimationDelayValue} from "@/util/index";
 
 interface StackDataItem {
   slug: string;
@@ -30,9 +32,10 @@ const Stack: React.FC = () => {
       <Grid columns={4}>
         {stacks_data.map((item: StackDataItem, index: number) => {
           return (
+            <Fade delay={calculateAnimationDelayValue(index) } key={index} >
             <Card
               center
-              className={`text-primary-content ${className["bg-grad" + index]}`}
+              className={`text-primary ${className["bg-grad" + index]}`}
               key={item.slug}
               title={item.slug}
               desc={
@@ -49,6 +52,7 @@ const Stack: React.FC = () => {
                 height: 80,
               }}
             />
+            </Fade>
           );
         })}
       </Grid>

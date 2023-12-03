@@ -18,16 +18,15 @@ const menu: MenuItem = {
 };
 
 const themes = [
-  "light",
   "dark",
-  "synthwave",
+
   "valentine",
   "halloween",
-  "garden",
-  "forest",
-  "lofi",
-  "luxury",
-  "dracula",
+
+  "forest", //bad card
+  "lofi", //bad card
+
+  "dracula", ///bad card
   "night",
   "coffee",
   "winter",

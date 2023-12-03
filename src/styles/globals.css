@@ -25,6 +25,39 @@ h4 {
 .blog-content h3 {
   @apply text-xl font-bold mt-3 mb-1;
 }
+.blog-content{
+  ul{
+    padding-left: 15px;
+    list-style: disc;
+
+  }
+}
+
+.pagination {
+  margin-top:32px;
+  font-size:32px;
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0 auto;
+  padding: 2em;
+  width: 100%;
+}
+.pagination span {
+  font-size:24px
+}
+.pagination a {
+  padding:32px;
+  flex: 1 1;
+}
+.pagination a:hover {
+  color:var(--lighblue);
+  background:linear-gradient(90deg,var(--p1),var(--p3))
+}
+.pagination .next {
+  text-align:right
+}
+
 .card {
   clip-path: polygon(
     0 0,
@@ -102,13 +135,6 @@ padding: 1px;
   max-height: 100%;
   min-width: 100%;
   object-fit: cover;
-}
-
-.pagination {
-  display: block;
-  margin: 0 auto;
-  padding: 2em;
-  width: 100%;
 }
 
 .image-wrapper {
