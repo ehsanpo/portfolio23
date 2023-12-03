@@ -9,16 +9,6 @@ import SeO from "@/components/Seo";
 import Heading from "@/components/Heading";
 
 export default function About() {
-  const classnames = [
-    "bg-grad0",
-    "bg-grad1",
-    "bg-grad2",
-    "bg-grad3",
-    "bg-grad4",
-    "bg-grad5",
-    "bg-grad6",
-    "bg-grad7",
-  ];
 
   return (
     <>
@@ -28,9 +18,7 @@ export default function About() {
       />
 
       <TextAndImage
-        className={`duration-500 transition-all bg-center bg-[length:100%] hover:bg-[length:500%] ${
-          classnames[Math.floor(Math.random() * classnames.length)]
-        } `}
+        className={`duration-500 transition-all bg-center bg-[length:100%] hover:bg-[length:500%]`}
         headline="About Ehsan"
         imgComponent={<Imagehover />}
         description="Welcome to my digital world! I'm Ehsan Pourhadi, a versatile Developer, Designer, and Producer with over ten years of experience crafting innovative solutions for the digital realm."
@@ -188,8 +176,6 @@ export default function About() {
           </div>
         </div>
       </Section>
-      <InstagramGallery />
-
       <Awards />
     </>
   );

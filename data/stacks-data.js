@@ -36,28 +36,27 @@ const stacks_data = [
     data: ["10", "9", "9", "10", "9"],
   },
   {
+    slug: "Apps",
+    labels: ["Electron js", "Typescript", "Tailwind", "Vite", "Reacte Native"],
+    icon: "/img/stacks/apps.svg",
+    data: ["7", "8", "8", "6", "8"],
+  },
+  {
     slug: "Music",
     labels: ["Reason Studios", "Bitwig", "Logic Pro", "BeatStep"],
     icon: "/img/stacks/music.svg",
     data: ["10", "7", "10", "6"],
   },
+
+];
+
+export default stacks_data;
+
+/*
   {
     slug: "Tools",
     labels: ["Git", "GraphQl", "Apollo", "ChatGPT", "CoPilot"],
     icon: "/img/stacks/tools2.svg",
     data: ["10", "9", "9", "9", "9"],
   },
-];
-
-export default stacks_data;
-
-// {
-//     slug: "Tools",
-//     labels: [
-//       "Git",
-//       "GraphQl",
-//       "Apollo",
-//       "Google Analytics",
-//       "Google Tag Manager",
-//     ],
-//   },
+*/

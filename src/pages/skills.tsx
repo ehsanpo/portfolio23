@@ -9,9 +9,11 @@ import Stats from "@/components/Stats";
 import Certs from "@/components/Certs";
 import TextAndImage from "@/components/TextAndImage";
 import SeO from "@/components/Seo";
+import Image from "next/image";
 
 const Skills = () => {
   const chart_data = [...chart_data_overall, ...stacks_data];
+  
 
   return (
     <>
@@ -68,6 +70,10 @@ const Skills = () => {
         headline="Continuous Development"
         description="I possess the skill to seamlessly integrate diverse changes, encompassing features, configurations, bug fixes, and experiments, into production or user access, ensuring both safety and efficiency within a sustainable framework."
       />
+      
+      <Section className="bg-white text-primary-content text-center">
+        <Image src="/github-wrapped-23.png" alt="github-wrapped-23" width={1200} height={600} className="m-auto" />
+      </Section>
 
       <Section className="bg-primary text-primary-content">
         <img
