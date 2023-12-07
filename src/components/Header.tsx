@@ -27,9 +27,9 @@ const themes = [
   "lofi", //bad card
 
   "dracula", ///bad card
-  "night",
-  "coffee",
-  "winter",
+  "night", ///bad card
+  "coffee",//bad card
+  "winter",//bad card
 ];
 
 const Header: React.FC = () => {
