@@ -9,7 +9,7 @@ export default function BlogTag({
 }: BlogTagProps): JSX.Element {
   return (
     <section>
-      <div className="wrapper">
+      <div className="wrapper text-center">
         <h3>
           {posts.length} posts tagged &quot;{tag}&quot;
         </h3>

@@ -8,19 +8,9 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ title, description }) => {
-  const classnames = [
-    "bg-grad0",
-    "bg-grad1",
-    "bg-grad3",
-    "bg-grad6",
-    "bg-grad7",
-  ];
-
   return (
     <section
-      className={`hero min-h-screen min-h-[300] ${
-        classnames[Math.floor(Math.random() * classnames.length)]
-      } `}
+      className={`hero min-h-screen min-h-[300] bg-grad7 `}
     >
       <div className="hero-content text-center">
         <div className="max-w-3xl">
