@@ -1,15 +1,30 @@
 import React from "react";
+import { useState, MouseEvent, useCallback } from "react";
 import Grid from "@/components/Grid";
 import stacks_data from "../../data/stacks-data";
 import Card from "./Card";
 import Heading from "./Heading";
 import { Fade } from "react-awesome-reveal";
-import  {calculateAnimationDelayValue} from "@/util/index";
 
 interface StackDataItem {
   slug: string;
   labels: string[];
   icon: string;
+}
+
+function throttle<T extends (...args: any[]) => any>(
+  func: T,
+  delay: number
+): (...args: Parameters<T>) => void {
+  let lastCall = 0;
+  return (...args: Parameters<T>) => {
+    const now = new Date().getTime();
+    if (now - lastCall < delay) {
+      return;
+    }
+    lastCall = now;
+    return func(...args);
+  };
 }
 
 const Stack: React.FC = () => {
@@ -31,29 +46,7 @@ const Stack: React.FC = () => {
       </Heading>
       <Grid columns={4}>
         {stacks_data.map((item: StackDataItem, index: number) => {
-          return (
-            <Fade delay={calculateAnimationDelayValue(index) } key={index} >
-            <Card
-              center
-              className={`text-primary ${className["bg-grad" + index]}`}
-              key={item.slug}
-              title={item.slug}
-              desc={
-                <ul className="card2 ">
-                  {item.labels.map((t) => (
-                    <li key={t}>{t}</li>
-                  ))}
-                </ul>
-              }
-              img={{
-                src: item.icon,
-                alt: item.slug,
-                width: 80,
-                height: 80,
-              }}
-            />
-            </Fade>
-          );
+          return <StackCards key={index} item={item} />;
         })}
       </Grid>
     </div>
@@ -61,3 +54,29 @@ const Stack: React.FC = () => {
 };
 
 export default Stack;
+
+const StackCards = ({ item }: { item: any }) => {
+  return (
+    <Fade>
+      <Card
+        center
+        className={`text-white hover:bg-grad2`}
+        key={item.slug}
+        title={item.slug}
+        desc={
+          <ul className="card2 ">
+            {item.labels.map((t: any) => (
+              <li key={t}>{t}</li>
+            ))}
+          </ul>
+        }
+        img={{
+          src: item.icon,
+          alt: item.slug,
+          width: 80,
+          height: 80,
+        }}
+      />
+    </Fade>
+  );
+};

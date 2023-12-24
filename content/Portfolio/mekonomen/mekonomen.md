@@ -25,8 +25,7 @@ body_text:
   - ""
 client:
   - Mekonomen
-tagline:
-  - ""
+tagline: "Car spare parts, car components & car services online"
 background_image:
   - "bg.jpg"
 logo:

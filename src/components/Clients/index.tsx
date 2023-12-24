@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Section from "@/components/Section";
-import Button from "@/components/Button";
-import styles from "./Clients.module.css";
 import Heading from "../Heading";
 
 interface ClientsProps {
@@ -9,45 +7,32 @@ interface ClientsProps {
 }
 
 const Clients: React.FC<ClientsProps> = ({ clients }) => {
-  const [showMore, setShowMore] = useState(false);
-  const [clientsToShow, setClientsToShow] = useState(5);
-
-  const handleShowMore = () => {
-    setShowMore((show) => !show);
-  };
-
   return (
     <Section>
       <div>
-        <Heading size="xl" element="h2" padding="xl" center>
+        <Heading size="l" element="h2" padding="xl" center>
           Clients
         </Heading>
-        <div
-          className={`py-8 flex flex-wrap ${styles.clientsContainer} ${
-            showMore ? styles.show : styles.hide
-          }`}
-        >
-          {clients
-            .slice(0, showMore ? clients.length : clientsToShow)
-            .map((client) => {
-              return (
-                <div
-                  key={client}
-                  className="clipPath2 w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 px-1 mb-1"
-                >
-                  <div className="bg-base-200 py-4 text-center rounded-lg">
-                    <span className="text-base-content">{client}</span>
-                    <div className="corners top"></div>
-                    <div className="corners bottom"></div>
-                  </div>
-                </div>
-              );
-            })}
-        </div>
-        <div className="mt-4 flex flex-col items-center justify-center">
-          <Button onClick={handleShowMore}>
-            {showMore ? "Show less" : "Show more"}
-          </Button>
+
+        <div className="relative m-auto  overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-gb4 before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-gaf after:content-['']">
+          <div className="animate-infinite-slider flex w-[calc(250px*10)]">
+            {clients.map((logo, index) => (
+              <div
+                className="slide flex  items-center justify-center m-3 whitespace-nowrap "
+                key={index}
+              >
+                {logo}
+              </div>
+            ))}
+            {clients.map((logo, index) => (
+              <div
+                className="slide flex  items-center justify-center m-3 whitespace-nowrap"
+                key={index}
+              >
+                {logo}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </Section>

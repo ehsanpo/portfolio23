@@ -21,7 +21,7 @@ case_link_url:
   - "https://www.bredband2.com/"
 client:
   - "Bredband2"
-tagline:
+tagline: "A smooth and secure digital everyday life for everyone."
 background_image:
   - "bg.jpg"
 logo:

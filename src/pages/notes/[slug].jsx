@@ -4,7 +4,9 @@ import matter from "gray-matter";
 import Template from "../../components/templates/blog.js";
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync("content/Blog");
+  const files = fs
+    .readdirSync("content/Blog")
+    .filter((f) => !f.includes(".DS_Store"));
   const paths = files.map((fileName) => ({
     params: {
       slug: fileName.replace(".md", ""),
@@ -19,7 +21,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params: { slug } }) {
   const fileName = fs.readFileSync(`content/Blog/${slug}/${slug}.md`, "utf-8");
-  const files = fs.readdirSync("content/Blog");
+  const files = fs
+    .readdirSync("content/Blog")
+    .filter((f) => !f.includes(".DS_Store"));
   // find the index of the current slug in files
   const index = files.findIndex((file) => file.replace(".md", "") === slug);
 

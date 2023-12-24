@@ -9,7 +9,7 @@ const Grid: React.FC<GridProps> = ({ columns, children }) => {
   return (
     <div
       className={`
-    grid ${columns === 4 ? "md:grid-cols-4 gap-4 sm:grid-cols-2" : ""}
+    grid relative ${columns === 4 ? "md:grid-cols-4 gap-4 sm:grid-cols-2" : ""}
     ${columns === 3 ? "md:grid-cols-3 gap-4 sm:grid-cols-2" : ""}
     `}
     >

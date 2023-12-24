@@ -3,7 +3,7 @@ const experienceData = [
     title: "Software Developer at Telavox",
     description:
       "Collaborated on the development of various software projects using React, Java, and ElectronJs.",
-    date: "2023",
+    date: "2023 - ",
   },
   {
     title: "Software Developer at Bredband2",

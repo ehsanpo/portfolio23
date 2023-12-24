@@ -6,7 +6,7 @@ import Heading from "./Heading";
 interface CardProps {
   title: string;
   img?: { src: string; alt: string; width?: number; height?: number };
-  desc: string | JSX.Element;
+  desc: React.ReactNode;
   tags?: string[];
   new?: boolean;
   link?: string;

@@ -33,7 +33,9 @@ const Portfolio = ({ data }: BlogProps) => (
 export default Portfolio;
 
 export async function getStaticProps() {
-  const files = fs.readdirSync("content/Blog");
+  const files = fs
+    .readdirSync("content/Blog")
+    .filter((f) => !f.includes(".DS_Store"));
   const posts = files.map((fileName) => {
     const slug = fileName.replace(".md", "");
     const readFile = fs.readFileSync(

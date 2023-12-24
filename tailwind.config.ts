@@ -11,7 +11,7 @@ const config: Config = {
     fontSize: {
       sm: "0.8rem",
       base: "1rem",
-      xl: "1.5rem",
+      xl: "2rem",
 
       "2xl": [
         "2rem",
@@ -66,8 +66,21 @@ const config: Config = {
         sans: ["var(--font-inter)"],
         mono: ["var(--font-roboto-mono)"],
       },
+      animation: {
+        ["infinite-slider"]: "infiniteSlider 20s linear infinite",
+      },
+      keyframes: {
+        infiniteSlider: {
+          "0%": { transform: "translateX(0)" },
+          "100%": {
+            transform: "translateX(calc(-250px * 5))",
+          },
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        gb4: "linear-gradient( to right, hsl(var(--b1) / 1 ) 0%,rgba(255,255,255,0) 100%)",
+        gaf: "linear-gradient( to right, hsl(var(--b1) / 1 ) 0%,rgba(255,255,255,0) 100%)",
         grad0:
           "radial-gradient(at 99% 21%, hsla(182, 95%, 70%, 1) 0, hsla(182, 95%, 70%, 0) 50%), radial-gradient(at 10% 32%, hsla(188, 93%, 59%, 1) 0, hsla(188, 93%, 59%, 0) 50%), radial-gradient(at 25% 37%, hsla(20, 93%, 70%, 1) 0, hsla(20, 93%, 70%, 0) 50%), radial-gradient(at 78% 47%, hsla(10, 90%, 57%, 1) 0, hsla(10, 90%, 57%, 0) 50%), radial-gradient(at 15% 3%, hsla(351, 87%, 62%, 1) 0, hsla(351, 87%, 62%, 0) 50%), radial-gradient(at 68% 53%, hsla(225, 91%, 56%, 1) 0, hsla(225, 91%, 56%, 0) 50%), radial-gradient(at 45% 0%, hsla(68, 87%, 53%, 1) 0, hsla(68, 87%, 53%, 0) 50%);",
         grad1:

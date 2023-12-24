@@ -13,7 +13,6 @@ import Image from "next/image";
 
 const Skills = () => {
   const chart_data = [...chart_data_overall, ...stacks_data];
-  
 
   return (
     <>
@@ -36,7 +35,7 @@ const Skills = () => {
         <Chart />
       </Section>
       <Section>
-        <Stats />
+        {/* <Stats /> */}
         <img
           src="https://ghchart.rshah.org/000000/ehsanpo"
           alt="ehsanpo Github Chart"
@@ -66,11 +65,10 @@ const Skills = () => {
       />
       <TextAndImage
         img={{ src: "/img/0_4.png", alt: "Continuous Development" }}
-        className="bg-none text-accent-content"
+        // className="bg-none text-accent-content"
         headline="Continuous Development"
         description="I possess the skill to seamlessly integrate diverse changes, encompassing features, configurations, bug fixes, and experiments, into production or user access, ensuring both safety and efficiency within a sustainable framework."
       />
-      
       <Section className="bg-white text-primary-content text-center">
         <Image src="/github-wrapped-23.png" alt="github-wrapped-23" width={1200} height={600} className="m-auto" />
       </Section>

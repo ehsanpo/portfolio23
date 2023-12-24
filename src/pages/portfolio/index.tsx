@@ -40,7 +40,10 @@ const PortfolioPage: React.FC<PortfolioPageProps> = ({
 export default PortfolioPage;
 
 export async function getStaticProps() {
-  const files = fs.readdirSync("content/Portfolio");
+  const files = fs
+    .readdirSync("content/Portfolio")
+    .filter((f) => !f.includes(".DS_Store"));
+
   const posts = files.map((fileName) => {
     const slug = fileName.replace(".md", "");
     const readFile = fs.readFileSync(
@@ -56,11 +59,11 @@ export async function getStaticProps() {
     };
   });
 
-  const sortedpost = posts.sort(
-    (a, b) =>
-      (new Date(b.data.date).getTime() as number) -
-      (new Date(a.data.date).getTime() as number)
-  );
+  const sortedpost = posts.sort((a, b) => {
+    const yearA = parseInt(a.data.port_date);
+    const yearB = parseInt(b.data.port_date);
+    return yearB - yearA;
+  });
 
   return { props: { portfolioBlockData: sortedpost } };
 }

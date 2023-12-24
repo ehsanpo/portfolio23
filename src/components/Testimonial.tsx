@@ -216,8 +216,12 @@ const TestimonialSingle: React.FC<{ item: TestimonialItem }> = ({ item }) => {
   const [readMore, setReadMore] = useState(false);
   return (
     <blockquote
-      className={`shadow-lg hover:shadow-2xl w-full mx-auto rounded-lg hover:border-accent bg-base-200 transition text-base-content border border-base-300 p-3 font-light mb-2
-    ${readMore ? " col-span-3 " : ""} `}
+      className={`shadow-lg hover:shadow-2xl w-full mx-auto rounded-lg bg-base-200 transition text-base-content border  p-3 font-light mb-2
+    ${
+      readMore
+        ? " col-span-3 absolute shadow-2xl border-accent"
+        : "border-base-300"
+    } `}
     >
       <div className="w-full flex mb-4 items-center">
         <div className="overflow-hidden rounded-full w-6 h-6 bg-base-200 border border-accent">
@@ -236,7 +240,9 @@ const TestimonialSingle: React.FC<{ item: TestimonialItem }> = ({ item }) => {
 
           <span className="text-lg leading-none italic font-bold ml-1">“</span>
         </p>
-        <Button onClick={() => setReadMore((prev) => !prev)}>Read More</Button>
+        <Button onClick={() => setReadMore((prev) => !prev)}>
+          {readMore ? "Close" : "Read More"}
+        </Button>
       </div>
     </blockquote>
   );
@@ -261,7 +267,7 @@ const Testimonial = () => {
             </div>
           </div>
 
-          <div className="">
+          <div>
             <Grid columns={3}>
               {testimonial_data.slice(0, 6).map((item) => (
                 <TestimonialSingle item={item} key={item.id} />
