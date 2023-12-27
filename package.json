@@ -1,47 +1,47 @@
 {
-  "name": "portfolio23",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "prebuild": "npm run copyimages",
-    "copyimages": "node ./bin/copy-images.mjs",
-    "lint": "next lint"
-  },
-  "browser": {
-    "fs": false,
-    "os": false,
-    "path": false
-  },
-  "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@types/node": "20.5.0",
-    "@types/react": "18.2.20",
-    "@types/react-dom": "18.2.7",
-    "autoprefixer": "10.4.15",
-    "chart.js": "^4.4.0",
-    "eslint": "8.47.0",
-    "eslint-config-next": "13.4.16",
-    "fs-extra": "^11.1.1",
-    "gray-matter": "^4.0.3",
-    "hover-effect": "^1.2.1",
-    "next": "13.4.16",
-    "postcss": "8.4.27",
-    "prettier-plugin-tailwindcss": "^0.5.9",
-    "react": "18.2.0",
-    "react-awesome-reveal": "^4.2.5",
-    "react-chartjs-2": "^5.2.0",
-    "react-dom": "18.2.0",
-    "react-spotify-player": "^1.0.4",
-    "react-string-replace": "^1.1.1",
-    "react-transition-group": "^4.4.5",
-    "tailwindcss": "3.3.3",
-    "typescript": "5.1.6"
-  },
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9",
-    "daisyui": "^3.5.1"
-  }
+    "name": "portfolio23",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "prebuild": "npm run copyimages",
+        "copyimages": "node ./bin/copy-images.mjs",
+        "lint": "next lint"
+    },
+    "browser": {
+        "fs": false,
+        "os": false,
+        "path": false
+    },
+    "dependencies": {
+        "@emotion/react": "^11.11.1",
+        "@types/node": "20.5.0",
+        "@types/react": "18.2.20",
+        "@types/react-dom": "18.2.7",
+        "chart.js": "^4.4.0",
+        "fs-extra": "^11.1.1",
+        "gray-matter": "^4.0.3",
+        "hover-effect": "^1.2.1",
+        "next": "13.4.16",
+        "postcss": "8.4.27",
+        "react": "18.2.0",
+        "react-awesome-reveal": "^4.2.5",
+        "react-chartjs-2": "^5.2.0",
+        "react-dom": "18.2.0",
+        "react-spotify-player": "^1.0.4",
+        "react-string-replace": "^1.1.1",
+        "react-transition-group": "^4.4.5",
+        "tailwindcss": "3.3.3",
+        "typescript": "5.1.6"
+    },
+    "devDependencies": {
+        "@tailwindcss/typography": "^0.5.9",
+        "daisyui": "^4.4.24",
+        "prettier-plugin-tailwindcss": "^0.5.9",
+        "eslint": "8.47.0",
+        "eslint-config-next": "13.4.16",
+        "autoprefixer": "10.4.15"
+    }
 }

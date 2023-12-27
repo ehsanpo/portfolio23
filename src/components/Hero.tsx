@@ -1,6 +1,6 @@
-import React from 'react';
-import Header from './Header';
-import Heading from './Heading';
+import React from "react";
+import Header from "./Header";
+import Heading from "./Heading";
 
 interface HeroProps {
     title: string;
@@ -9,7 +9,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ title, description }) => {
     return (
-        <section className={`hero min-h-[300] min-h-screen bg-grad7 `}>
+        <section className={`hero min-h-[80vh]  bg-grad7 `}>
             <div className="hero-content text-center">
                 <div className="max-w-3xl">
                     <Heading

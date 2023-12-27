@@ -5,298 +5,337 @@
 @import "tailwindcss/utilities";
 
 body {
-  font-family: var(--tomorrow-font);
+    font-family: var(--tomorrow-font);
 }
 
 h1,
 h2 {
-  font-family: var(--hexa-font);
+    font-family: var(--rajdhani-font);
+    text-transform: uppercase;
 }
 
 h3,
 h4 {
-  font-family: var(--rajdhani-font);
+    font-family: var(--rajdhani-font);
 }
 
 .blog-content h2 {
-  @apply text-2xl font-bold mt-1 mb-2;
+    @apply mb-2 mt-1 text-2xl font-bold;
 }
 
 .blog-content h3 {
-  @apply text-xl font-bold mt-3 mb-1;
+    @apply mb-1 mt-3 text-xl font-bold;
 }
-.blog-content{
-  ul{
-    padding-left: 15px;
-    list-style: disc;
-
-  }
+.blog-content {
+    ul {
+        padding-left: 15px;
+        list-style: disc;
+    }
 }
 
 .pagination {
-  margin-top:32px;
-  font-size:32px;
-  display: flex;
-  flex-wrap: wrap;
+    margin-top: 32px;
+    font-size: 32px;
+    display: flex;
+    flex-wrap: wrap;
 
-  margin: 0 auto;
-  padding: 2em;
-  width: 100%;
+    margin: 0 auto;
+    padding: 2em;
+    width: 100%;
 }
 .pagination span {
-  font-size:24px
+    font-size: 24px;
 }
 .pagination a {
-  padding:32px;
-  flex: 1 1;
+    padding: 32px;
+    flex: 1 1;
 }
 .pagination a:hover {
-  color:var(--lighblue);
-  background:linear-gradient(90deg,var(--p1),var(--p3))
+    color: var(--lighblue);
+    background: linear-gradient(90deg, var(--p1), var(--p3));
 }
 .pagination .next {
-  text-align:right
+    text-align: right;
 }
 
-.card {
-  clip-path: polygon(
-    0 0,
-    25% 0,
-    calc(25% + 9px) 9px,
-    calc(75% - 9px) 9px,
-    75% 0,
-    100% 0,
-    100% 100%,
-    60% 100%,
-    calc(60% - 8px) calc(100% - 8px),
-    calc(40% + 8px) calc(100% - 8px),
-    40% 100%,
-    0 100%
-  );
+.card,
+.hero {
+    clip-path: polygon(
+        0 0,
+        25% 0,
+        calc(25% + 9px) 9px,
+        calc(75% - 9px) 9px,
+        75% 0,
+        100% 0,
+        100% 100%,
+        60% 100%,
+        calc(60% - 8px) calc(100% - 8px),
+        calc(40% + 8px) calc(100% - 8px),
+        40% 100%,
+        0 100%
+    );
 }
 
-.clipPath2{
-  clip-path: polygon(-1px 15px,0 15px,15px 0,15px 0,15px 0,15px 0,15px -1px,calc(50% - 22.5px) -1px,calc(50% - 22.5px) 0,calc(50% - 7.5px) 15px,calc(50% + 7.5px) 15px,calc(50% + 22.5px) 0,calc(50% + 22.5px) -1px,calc(100% - 15px) -1px,calc(100% - 15px) 0,100% 15px,100% 15px,100% 15px,100% 15px,calc(100% + 1px) 15px,calc(100% + 1px) calc(100% - 30px),100% calc(100% - 30px),calc(100% - 15px) calc(100% - 15px),calc(100% - 15px) calc(100% - 15px),calc(100% - 45px) calc(100% - 15px),calc(100% - 60px) 100%,calc(100% - 60px) calc(100% + 1px),60px calc(100% + 1px),60px 100%,45px calc(100% - 15px),15px calc(100% - 15px),15px calc(100% - 15px),0 calc(100% - 30px),-1px calc(100% - 30px));
+.clipPath2 {
+    clip-path: polygon(
+        -1px 15px,
+        0 15px,
+        15px 0,
+        15px 0,
+        15px 0,
+        15px 0,
+        15px -1px,
+        calc(50% - 22.5px) -1px,
+        calc(50% - 22.5px) 0,
+        calc(50% - 7.5px) 15px,
+        calc(50% + 7.5px) 15px,
+        calc(50% + 22.5px) 0,
+        calc(50% + 22.5px) -1px,
+        calc(100% - 15px) -1px,
+        calc(100% - 15px) 0,
+        100% 15px,
+        100% 15px,
+        100% 15px,
+        100% 15px,
+        calc(100% + 1px) 15px,
+        calc(100% + 1px) calc(100% - 30px),
+        100% calc(100% - 30px),
+        calc(100% - 15px) calc(100% - 15px),
+        calc(100% - 15px) calc(100% - 15px),
+        calc(100% - 45px) calc(100% - 15px),
+        calc(100% - 60px) 100%,
+        calc(100% - 60px) calc(100% + 1px),
+        60px calc(100% + 1px),
+        60px 100%,
+        45px calc(100% - 15px),
+        15px calc(100% - 15px),
+        15px calc(100% - 15px),
+        0 calc(100% - 30px),
+        -1px calc(100% - 30px)
+    );
 }
 section {
-  margin-bottom: 8px;
-  clip-path: polygon(
-    0 0,
-    25% 0,
-    calc(25% + 15px) 15px,
-    calc(75% - 15px) 15px,
-    75% 0,
-    100% 0,
-    100% 100%,
-    60% 100%,
-    calc(60% - 20px) calc(100% - 20px),
-    calc(40% + 20px) calc(100% - 20px),
-    40% 100%,
-    0 100%
-  );
+    margin-bottom: 8px;
+    clip-path: polygon(
+        0 0,
+        25% 0,
+        calc(25% + 15px) 15px,
+        calc(75% - 15px) 15px,
+        75% 0,
+        100% 0,
+        100% 100%,
+        60% 100%,
+        calc(60% - 20px) calc(100% - 20px),
+        calc(40% + 20px) calc(100% - 20px),
+        40% 100%,
+        0 100%
+    );
 }
 
 .card-glow {
-  position: absolute;
-  width: 50%;
-  margin: 0 auto;
-  height: 9px;
-  right: 0;
-  left: 0;
-  filter: blur(5px);
-  transition: all 350ms ease-in-out;
-  top: 8px;
+    position: absolute;
+    width: 50%;
+    margin: 0 auto;
+    height: 9px;
+    right: 0;
+    left: 0;
+    filter: blur(5px);
+    transition: all 350ms ease-in-out;
+    top: 8px;
 }
 
-article:hover  .card-glow{
-  filter: blur(8px);
-  top:5px;
+article:hover .card-glow {
+    filter: blur(8px);
+    top: 5px;
 }
 
-.article-card{
-padding: 1px;
+.article-card {
+    padding: 1px;
 }
-
 
 .instagram-gallery {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .instagram-item {
-  display: block;
-  position: relative;
-  height: 240px;
-  flex-grow: 1;
+    display: block;
+    position: relative;
+    height: 240px;
+    flex-grow: 1;
 }
 
 .instagram-image {
-  display: block;
-  max-height: 100%;
-  min-width: 100%;
-  object-fit: cover;
+    display: block;
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
 }
 
 .image-wrapper {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
 }
 .gallery-wrapper img {
-  position: relative !important;
+    position: relative !important;
 }
 
 .SpotifyPlayer {
-  border-radius: 0.75rem;
+    border-radius: 0.75rem;
 }
 .video-wrapper--fullscreen {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
 }
 .video-wrapper {
-  --color: ##fff;
-  --color-invert: #ffffff;
-  --clip-path: circle(15px at left);
-  --clip-path-hover: circle(70px at left);
-  --clip-path-clicked: circle(100vw at left);
-  --duration: 0.4s;
-  --timing-function: ease;
-  position: relative;
-  display: flex;
-  justify-content: right;
-  align-items: center;
+    --color: ##fff;
+    --color-invert: #ffffff;
+    --clip-path: circle(15px at left);
+    --clip-path-hover: circle(70px at left);
+    --clip-path-clicked: circle(100vw at left);
+    --duration: 0.4s;
+    --timing-function: ease;
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
 }
 .video-wrapper .video {
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  width: 16px;
-  height: 16px;
+    width: 16px;
+    height: 16px;
 
-  clip-path: var(--clip-path);
+    clip-path: var(--clip-path);
 
-  transition: clip-path var(--duration) var(--timing-function);
+    transition: clip-path var(--duration) var(--timing-function);
 }
 .video-wrapper .video iframe {
-  position: fixed;
+    position: fixed;
 
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
 }
 .video-wrapper .text {
-  position: relative;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-  opacity: var(--opacity, 1);
-  transition: opacity 0.3s var(--timing-function) 0.2s;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    opacity: var(--opacity, 1);
+    transition: opacity 0.3s var(--timing-function) 0.2s;
 }
 .video-wrapper .text::before,
 .video-wrapper .text::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: -1px;
-  right: 25px;
-  height: 0;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -1px;
+    right: 25px;
+    height: 0;
 }
 .video-wrapper .text::before {
-  box-shadow: 16px 0 0 1px var(--color);
-  right: var(--r, 100%);
-  opacity: var(--opacity, 0);
-  transition: right 0.5s ease-in, opacity 0.1s linear;
+    box-shadow: 16px 0 0 1px var(--color);
+    right: var(--r, 100%);
+    opacity: var(--opacity, 0);
+    transition:
+        right 0.5s ease-in,
+        opacity 0.1s linear;
 }
 .video-wrapper .text::after {
-  box-shadow: 16px 0 0 1px var(--color-invert);
-  -webkit-clip-path: var(--clip-path);
-  clip-path: var(--clip-path);
-  transition: -webkit-clip-path var(--duration) var(--timing-function);
-  transition: clip-path var(--duration) var(--timing-function);
-  transition: clip-path var(--duration) var(--timing-function),
-    -webkit-clip-path var(--duration) var(--timing-function);
+    box-shadow: 16px 0 0 1px var(--color-invert);
+    -webkit-clip-path: var(--clip-path);
+    clip-path: var(--clip-path);
+    transition: -webkit-clip-path var(--duration) var(--timing-function);
+    transition: clip-path var(--duration) var(--timing-function);
+    transition:
+        clip-path var(--duration) var(--timing-function),
+        -webkit-clip-path var(--duration) var(--timing-function);
 }
 .video-wrapper .text > span::before,
 .video-wrapper .text > span::after {
-  content: attr(data-text);
-  padding-left: 16px;
+    content: attr(data-text);
+    padding-left: 16px;
 }
 .video-wrapper .text > span::before {
-  color: var(--color);
+    color: var(--color);
 }
 .video-wrapper .text > span::after {
-  color: var(--color-invert);
-  -webkit-clip-path: var(--clip-path);
-  clip-path: var(--clip-path);
-  transition: -webkit-clip-path var(--duration) var(--timing-function);
-  transition: clip-path var(--duration) var(--timing-function);
-  transition: clip-path var(--duration) var(--timing-function),
-    -webkit-clip-path var(--duration) var(--timing-function);
-  position: absolute;
-  left: 0;
+    color: var(--color-invert);
+    -webkit-clip-path: var(--clip-path);
+    clip-path: var(--clip-path);
+    transition: -webkit-clip-path var(--duration) var(--timing-function);
+    transition: clip-path var(--duration) var(--timing-function);
+    transition:
+        clip-path var(--duration) var(--timing-function),
+        -webkit-clip-path var(--duration) var(--timing-function);
+    position: absolute;
+    left: 0;
 }
 .video-wrapper input {
-  width: 220px;
-  height: 40px;
-  text-align: right;
-  position: absolute;
+    width: 220px;
+    height: 40px;
+    text-align: right;
+    position: absolute;
 
-  right: 0;
-  border-radius: 40px;
-  outline: none;
-  z-index: 2;
+    right: 0;
+    border-radius: 40px;
+    outline: none;
+    z-index: 2;
 
-  appearance: none;
-  cursor: pointer;
+    appearance: none;
+    cursor: pointer;
 }
 .video-wrapper input:focus {
-  outline: 0;
+    outline: 0;
 }
 .video-wrapper input:hover ~ .video {
-  -webkit-clip-path: var(--clip-path-hover);
-  clip-path: var(--clip-path-hover);
+    -webkit-clip-path: var(--clip-path-hover);
+    clip-path: var(--clip-path-hover);
 }
 .video-wrapper input:hover ~ .text::before {
-  --r: 25px;
-  --opacity: 1;
+    --r: 25px;
+    --opacity: 1;
 }
 .video-wrapper input:hover ~ .text::after {
-  -webkit-clip-path: var(--clip-path-hover);
-  clip-path: var(--clip-path-hover);
+    -webkit-clip-path: var(--clip-path-hover);
+    clip-path: var(--clip-path-hover);
 }
 .video-wrapper input:hover ~ .text > span::after {
-  -webkit-clip-path: var(--clip-path-hover);
-  clip-path: var(--clip-path-hover);
+    -webkit-clip-path: var(--clip-path-hover);
+    clip-path: var(--clip-path-hover);
 }
 .video-wrapper input:checked {
-  width: 100%;
-  height: calc(100% - 80px);
-  border-radius: 0;
+    width: 100%;
+    height: calc(100% - 80px);
+    border-radius: 0;
 }
 .video-wrapper input:checked ~ .video {
-  -webkit-clip-path: var(--clip-path-clicked);
-  clip-path: var(--clip-path-clicked);
+    -webkit-clip-path: var(--clip-path-clicked);
+    clip-path: var(--clip-path-clicked);
 }
 .video-wrapper input:checked ~ .text {
-  --opacity: 0;
-  transition: opacity 0.3s var(--timing-function);
+    --opacity: 0;
+    transition: opacity 0.3s var(--timing-function);
 }
 .video-wrapper input:checked ~ .text::after {
-  -webkit-clip-path: var(--clip-path-clicked);
-  clip-path: var(--clip-path-clicked);
+    -webkit-clip-path: var(--clip-path-clicked);
+    clip-path: var(--clip-path-clicked);
 }
 .video-wrapper input:checked ~ .text > span::after {
-  -webkit-clip-path: var(--clip-path-clicked);
-  clip-path: var(--clip-path-clicked);
+    -webkit-clip-path: var(--clip-path-clicked);
+    clip-path: var(--clip-path-clicked);
 }

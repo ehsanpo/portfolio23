@@ -10,54 +10,54 @@ import Section from "@/components/Section";
 import SeO from "@/components/Seo";
 
 export default function Home({ portfolioData, clients }: HomeProps) {
-  return (
-    <main>
-      <SeO
-        title="Ehsan Pourhadi - Digital Developer Portfolio"
-        description="Explore a diverse 10+ year journey spanning Software Development, UI/UX Design, Music Production, AI Operations, Tech Research, and more."
-      />
-      <Hero
-        title="Navigating Bits and Beats"
-        description="A Multi-Dimensional Portfolio Journey in Software Development, UI/UX Design, Music Production, AI Operation, Tech Research, and More with more than ten years of experience creating and developing software for the web."
-      />
+    return (
+        <main>
+            <SeO
+                title="Ehsan Pourhadi - Digital Developer Portfolio"
+                description="Explore a diverse 10+ year journey spanning Software Development, UI/UX Design, Music Production, AI Operations, Tech Research, and more."
+            />
+            <Hero
+                title="Navigating Bits and Beats"
+                description="A Multi-Dimensional Portfolio Journey in Software Development, UI/UX Design, Music Production, AI Operation, Tech Research, and More with more than ten years of experience creating and developing software for the web."
+            />
 
-      <Section>
-        <Portfolio data={portfolioData} />
-      </Section>
-      <Section primary>
-        <Stacks />
-      </Section>
-      <Awards />
-      <Testimonial />
-      <Clients clients={clients} />
-    </main>
-  );
+            <Section>
+                <Portfolio data={portfolioData} IsHome />
+            </Section>
+            <Section primary>
+                <Stacks />
+            </Section>
+            <Awards />
+            <Testimonial />
+            <Clients clients={clients} />
+        </main>
+    );
 }
 
 export async function getStaticProps(): Promise<{ props: HomeProps }> {
-  const files = fs
-    .readdirSync("content/Portfolio")
-    .filter((f) => !f.includes(".DS_Store"));
+    const files = fs
+        .readdirSync("content/Portfolio")
+        .filter((f) => !f.includes(".DS_Store"));
 
-  const posts: PortfolioItem[] = files.map((fileName) => {
-    const slug = fileName.replace(".md", "");
-    const readFile = fs.readFileSync(
-      `content/Portfolio/${fileName}/${fileName}.md`,
-      "utf-8"
-    );
-    const { data: frontmatter } = matter(readFile) as any as {
-      data: FrontMatter;
-    };
-    frontmatter.fileName = fileName;
-    return {
-      slug: frontmatter.permalink,
-      data: frontmatter,
-    };
-  });
-  let clients = posts
-    .map((post) => post.data.client[0])
-    .filter((client, index, self) => self.indexOf(client) === index);
+    const posts: PortfolioItem[] = files.map((fileName) => {
+        const slug = fileName.replace(".md", "");
+        const readFile = fs.readFileSync(
+            `content/Portfolio/${fileName}/${fileName}.md`,
+            "utf-8",
+        );
+        const { data: frontmatter } = matter(readFile) as any as {
+            data: FrontMatter;
+        };
+        frontmatter.fileName = fileName;
+        return {
+            slug: frontmatter.permalink,
+            data: frontmatter,
+        };
+    });
+    let clients = posts
+        .map((post) => post.data.client[0])
+        .filter((client, index, self) => self.indexOf(client) === index);
 
-  let sources = posts.filter((post) => post.data.onHome === true);
-  return { props: { portfolioData: sources, clients } };
+    let sources = posts.filter((post) => post.data.onHome === true);
+    return { props: { portfolioData: sources, clients } };
 }
